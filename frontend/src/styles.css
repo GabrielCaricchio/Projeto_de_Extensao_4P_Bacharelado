@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Efeito de brilho suave e flutuação estilo Claude Mythos */
+.mythos-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.mythos-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(6, 182, 212, 0.25);
+}
+
+.dark .mythos-card:hover {
+  box-shadow: 0 12px 30px -10px rgba(34, 211, 238, 0.15);
+}
+
+/* Efeito de gradiente animado sutil nas bordas */
+.border-gradient-cyan {
+  border-image: linear-gradient(to right, #06b6d4, #3b82f6) 1;
+}
+
+/* Animação suave de pulso para o CyberBot */
+@keyframes bot-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-bot-float {
+  animation: bot-float 4s ease-in-out infinite;
+}
+
+/* Custom Scrollbar com acento ciano */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}

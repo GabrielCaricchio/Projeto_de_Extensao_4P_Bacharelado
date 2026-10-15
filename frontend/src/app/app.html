@@ -1,0 +1,16 @@
+<div class="min-h-screen flex flex-col bg-[#F5F7FA] dark:bg-[#0B132B] text-slate-800 dark:text-slate-100 transition-colors duration-300">
+  <!-- Barra de Navegação Superior com Acentos Ciano -->
+  <app-navbar></app-navbar>
+
+  <!-- Conteúdo Principal: Sidebar de Navegação + Visualizador de Rotas -->
+  <div class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col lg:flex-row gap-8">
+    <app-sidebar></app-sidebar>
+    
+    <main class="flex-1 min-w-0">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+
+  <!-- Rodapé da plataforma -->
+  <app-footer></app-footer>
+</div>

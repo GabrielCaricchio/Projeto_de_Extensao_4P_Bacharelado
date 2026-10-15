@@ -1,0 +1,73 @@
+# Environment variables and secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Dependencies and generated output
+**/node_modules/
+**/dist/
+**/target/
+**/build/
+**/tmp/
+**/out-tsc/
+**/bazel-out/
+**/.angular/
+**/.sass-cache/
+**/coverage/
+**/typings/
+**/__screenshots__/
+
+# Python environments, caches, and artifacts
+**/.venv/
+**/venv/
+**/env/
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/*.so
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/*.egg-info/
+**/.coverage
+**/htmlcov/
+**/.chroma/
+**/.cache/
+
+# Maven wrapper binary and help file
+**/.mvn/wrapper/maven-wrapper.jar
+**/HELP.md
+
+# IDEs and editors
+.idea/
+.vscode/
+**/.project
+**/.classpath
+**/.factorypath
+**/.settings/
+**/.springBeans
+**/.sts4-cache/
+**/.apt_generated/
+**/.nb-gradle/
+**/nbproject/private/
+**/nbbuild/
+**/nbdist/
+**/*.iml
+**/*.iws
+**/*.ipr
+**/*.launch
+**/*.sublime-workspace
+**/.history/
+
+# Operating system and logs
+.DS_Store
+Thumbs.db
+**/.DS_Store
+**/Thumbs.db
+**/*.log
+npm-debug.log*
+yarn-error.log*
+testem.log
+connect.lock
+libpeerconnection.log
+
