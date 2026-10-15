@@ -1,6 +1,18 @@
 # ==========================================
 # Estágio 1: Build da aplicação (Maven)
 # ==========================================
+# Stage 1 builds the Angular pages and assets.
+FROM node:22-alpine AS frontend-builder
+
+WORKDIR /app
+
+COPY frontend/package*.json ./
+RUN npm ci
+
+COPY frontend/ ./
+RUN npm run build -- --configuration production
+
+# Stage 2 packages the Java routes together with the Angular assets.
 FROM maven:3.9.9-eclipse-temurin-21-alpine AS builder
 
 WORKDIR /app
@@ -11,6 +23,7 @@ RUN mvn dependency:resolve -B
 
 # Copia o código-fonte e realiza o build do JAR
 COPY back-end/src ./src
+COPY --from=frontend-builder /app/dist/frontend/browser/ ./src/main/resources/static/
 RUN mvn clean package -DskipTests
 
 # ==========================================

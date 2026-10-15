@@ -7,7 +7,7 @@ export class ThemeService {
   isDarkMode = signal<boolean>(false);
 
   constructor() {
-    // Carrega preferência do localStorage ou preferência do sistema
+    // Prioriza a escolha salva; se for a primeira visita, usa a preferência do sistema.
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     
@@ -15,7 +15,7 @@ export class ThemeService {
     this.isDarkMode.set(initialDark);
     this.applyTheme(initialDark);
 
-    // Reage sempre que o sinal de tema mudar
+    // Mantém a classe do documento e a preferência salva sincronizadas com o sinal.
     effect(() => {
       const dark = this.isDarkMode();
       this.applyTheme(dark);

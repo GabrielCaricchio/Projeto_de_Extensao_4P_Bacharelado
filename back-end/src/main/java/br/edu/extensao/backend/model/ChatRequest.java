@@ -1,4 +1,4 @@
-package br.edu.extensao.cultura_digital.model;
+package br.edu.extensao.backend.model;
 
 public record ChatRequest(
         String message

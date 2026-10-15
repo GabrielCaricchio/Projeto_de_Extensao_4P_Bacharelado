@@ -1,4 +1,4 @@
-package br.edu.extensao.cultura_digital;
+package br.edu.extensao.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

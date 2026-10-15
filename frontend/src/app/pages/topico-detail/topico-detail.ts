@@ -1,5 +1,5 @@
-import { Component, inject, signal, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { Component, inject, Input, signal, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TopicoService } from '../../services/topico.service';
 import { Topico, QuizPergunta } from '../../models/topico.model';
 
@@ -115,7 +115,7 @@ import { Topico, QuizPergunta } from '../../models/topico.model';
 
                   <div class="grid grid-cols-1 gap-2.5">
                     @for (opcao of pergunta.opcoes; track $index; let optIndex = $index) {
-                      <button (click)="responderQuiz(qIndex, optIndex, pergunta.indiceCorreto)"
+                      <button (click)="responderQuiz(qIndex, optIndex)"
                               type="button"
                               [disabled]="respostasUsuario()[qIndex] !== undefined"
                               [class]="obterEstiloBotaoQuiz(qIndex, optIndex, pergunta.indiceCorreto)"
@@ -170,25 +170,19 @@ import { Topico, QuizPergunta } from '../../models/topico.model';
   `
 })
 export class TopicoDetailComponent implements OnInit {
-  private route = inject(ActivatedRoute);
   private topicoService = inject(TopicoService);
 
+  @Input({ required: true }) slug!: string;
   topico = signal<Topico | undefined>(undefined);
   respostasUsuario = signal<{ [key: number]: number }>({});
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      const slug = params.get('slug');
-      if (slug) {
-        this.respostasUsuario.set({});
-        this.topicoService.buscarPorSlug(slug).subscribe(data => {
-          this.topico.set(data);
-        });
-      }
+    this.topicoService.buscarPorSlug(this.slug).subscribe(data => {
+      this.topico.set(data);
     });
   }
 
-  responderQuiz(perguntaIndex: number, opcaoIndex: number, corretoIndex: number): void {
+  responderQuiz(perguntaIndex: number, opcaoIndex: number): void {
     this.respostasUsuario.update(prev => ({
       ...prev,
       [perguntaIndex]: opcaoIndex

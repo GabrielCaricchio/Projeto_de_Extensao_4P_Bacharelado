@@ -4,15 +4,16 @@ Plataforma educativa sobre segurança e cidadania digital. Reúne conteúdos sob
 
 ## Funcionalidades
 
-- Conteúdos educativos organizados por tópico, com dicas e quizzes.
+- Conteúdos educativos organizados por tópico, com dicas e quizzes mantidos no frontend.
 - Chatbot integrado à API Groq para responder perguntas em português.
 - Alternância entre tema claro e escuro, com preferência salva no navegador.
 - Interface responsiva em Angular.
 
 ## Tecnologias
 
-- Frontend: Angular 22 e Tailwind CSS 4.
-- Backend: Java 21 e Spring Boot.
+- Páginas: Angular 22 e Tailwind CSS 4.
+- Rotas e servidor web: Java 21 e Spring Boot.
+- Proxy HTTP: Nginx.
 - Serviço de IA: Python 3.12, FastAPI e LangChain Groq.
 - Execução local: Docker Compose.
 
@@ -58,23 +59,24 @@ docker compose up -d --force-recreate chatbot-api
 
 | Serviço    | Acesso                                            | Responsabilidade                                         |
 | ----------- | ------------------------------------------------- | -------------------------------------------------------- |
-| Frontend    | `http://localhost` ou `http://localhost:4200` | Interface Angular servida pelo Nginx.                    |
-| Backend     | `http://localhost:8080`                         | API REST de tópicos, status e encaminhamento do chat.   |
+| Frontend    | `http://localhost` ou `http://localhost:4200` | Angular mantém a navegação SPA; Nginx encaminha ao backend. |
+| Backend     | `http://localhost:8080`                         | Resolve URLs diretas, serve assets Angular e encaminha o chat.|
 | Chatbot API | Interno na porta `8000`                         | Consulta a IA Groq; não é exposta diretamente no host. |
 
-## API
+## Páginas e API
 
-Verificar se o backend está ativo:
+O Spring aceita as URLs abaixo e serve o shell Angular. O Angular Router troca entre componentes de página sem recarregar o documento:
 
-```bash
-curl http://localhost:8080/api/status
-```
+- `/` - início
+- `/topicos/golpes-digitais`
+- `/topicos/cyberbullying`
+- `/topicos/redes-sociais`
+- `/topicos/malwares`
+- `/topicos/uso-inadequado-ia`
+- `/topicos/ia-estudos`
+- `/chatbot`
 
-Listar os tópicos:
-
-```bash
-curl http://localhost:8080/api/topicos
-```
+O chatbot é encaminhado pelo backend para a API Python/Groq:
 
 Enviar uma pergunta ao chatbot:
 

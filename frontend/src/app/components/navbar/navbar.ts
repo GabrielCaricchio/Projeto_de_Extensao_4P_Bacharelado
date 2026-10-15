@@ -1,11 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink],
   template: `
     <header class="sticky top-0 z-50 backdrop-blur-md bg-[#F5F7FA]/90 dark:bg-[#0B132B]/90 border-b border-cyan-500/20 shadow-sm transition-colors duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,15 +27,15 @@ import { ThemeService } from '../../services/theme.service';
 
           <!-- Menu Desktop -->
           <nav class="hidden md:flex items-center gap-1">
-            <a routerLink="/" routerLinkActive="text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/50" [routerLinkActiveOptions]="{exact: true}"
+            <a routerLink="/"
                class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all">
               Início
             </a>
-            <a routerLink="/topicos/golpes-digitais" routerLinkActive="text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/50"
+            <a routerLink="/topicos/golpes-digitais"
                class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all">
               Tópicos
             </a>
-            <a routerLink="/chatbot" routerLinkActive="text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/50"
+            <a routerLink="/chatbot"
                class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all">
               <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
               CyberBot (IA)

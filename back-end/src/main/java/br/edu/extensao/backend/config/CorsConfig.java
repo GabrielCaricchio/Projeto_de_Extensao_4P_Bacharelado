@@ -1,4 +1,4 @@
-package br.edu.extensao.cultura_digital.config;
+package br.edu.extensao.backend.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink],
   template: `
     <aside class="w-full lg:w-72 shrink-0">
       <div class="sticky top-20 bg-white dark:bg-[#1E293B] rounded-2xl p-4 shadow-sm border border-slate-200/80 dark:border-slate-800 transition-colors">
@@ -17,16 +17,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
         </div>
 
         <nav class="flex flex-col gap-1.5">
-          <a routerLink="/" 
-             routerLinkActive="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-600 dark:text-cyan-400 border-l-4 border-cyan-500 font-semibold" 
-             [routerLinkActiveOptions]="{exact: true}"
+          <a routerLink="/"
              class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/80 hover:text-cyan-600 dark:hover:text-cyan-400 transition-all group">
             <span class="text-lg group-hover:scale-110 transition-transform">🏠</span>
             <span>Visão Geral</span>
           </a>
 
-          <a routerLink="/topicos/golpes-digitais" 
-             routerLinkActive="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-600 dark:text-cyan-400 border-l-4 border-cyan-500 font-semibold"
+          <a routerLink="/topicos/golpes-digitais"
              class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/80 hover:text-cyan-600 dark:hover:text-cyan-400 transition-all group">
             <span class="text-lg group-hover:scale-110 transition-transform">🛡️</span>
             <div class="flex flex-col">
@@ -35,8 +32,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             </div>
           </a>
 
-          <a routerLink="/topicos/cyberbullying" 
-             routerLinkActive="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-600 dark:text-cyan-400 border-l-4 border-cyan-500 font-semibold"
+          <a routerLink="/topicos/cyberbullying"
              class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/80 hover:text-cyan-600 dark:hover:text-cyan-400 transition-all group">
             <span class="text-lg group-hover:scale-110 transition-transform">🤝</span>
             <div class="flex flex-col">
@@ -45,8 +41,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             </div>
           </a>
 
-          <a routerLink="/topicos/redes-sociais" 
-             routerLinkActive="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-600 dark:text-cyan-400 border-l-4 border-cyan-500 font-semibold"
+          <a routerLink="/topicos/redes-sociais"
              class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/80 hover:text-cyan-600 dark:hover:text-cyan-400 transition-all group">
             <span class="text-lg group-hover:scale-110 transition-transform">📱</span>
             <div class="flex flex-col">
@@ -55,8 +50,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             </div>
           </a>
 
-          <a routerLink="/topicos/malwares" 
-             routerLinkActive="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-600 dark:text-cyan-400 border-l-4 border-cyan-500 font-semibold"
+          <a routerLink="/topicos/malwares"
              class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/80 hover:text-cyan-600 dark:hover:text-cyan-400 transition-all group">
             <span class="text-lg group-hover:scale-110 transition-transform">🦠</span>
             <div class="flex flex-col">
@@ -65,8 +59,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             </div>
           </a>
 
-          <a routerLink="/topicos/uso-inadequado-ia" 
-             routerLinkActive="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-600 dark:text-cyan-400 border-l-4 border-cyan-500 font-semibold"
+          <a routerLink="/topicos/uso-inadequado-ia"
              class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/80 hover:text-cyan-600 dark:hover:text-cyan-400 transition-all group">
             <span class="text-lg group-hover:scale-110 transition-transform">⚠️</span>
             <div class="flex flex-col">
@@ -75,8 +68,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             </div>
           </a>
 
-          <a routerLink="/topicos/ia-estudos" 
-             routerLinkActive="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-600 dark:text-cyan-400 border-l-4 border-cyan-500 font-semibold"
+          <a routerLink="/topicos/ia-estudos"
              class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/80 hover:text-cyan-600 dark:hover:text-cyan-400 transition-all group">
             <span class="text-lg group-hover:scale-110 transition-transform">🎓</span>
             <div class="flex flex-col">
@@ -87,8 +79,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
           <div class="my-2 border-t border-slate-100 dark:border-slate-800"></div>
 
-          <a routerLink="/chatbot" 
-             routerLinkActive="bg-cyan-500 text-white font-semibold shadow-md shadow-cyan-500/30"
+          <a routerLink="/chatbot"
              class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium bg-cyan-50 dark:bg-cyan-950/40 text-cyan-700 dark:text-cyan-300 hover:bg-cyan-100 dark:hover:bg-cyan-900/60 transition-all group">
             <span class="text-lg animate-bounce">🤖</span>
             <div class="flex flex-col">
