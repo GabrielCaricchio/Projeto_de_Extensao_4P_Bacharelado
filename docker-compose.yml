@@ -3,51 +3,58 @@ services:
     build:
       context: .
       dockerfile: back-end/Dockerfile
-    container_name: cultura-digital-backend
+    container_name: cybertech-backend
     ports:
       - "8080:8080"
     environment:
       - SERVER_PORT=8080
+      - FRONTEND_URL=http://localhost:4200
       - CHATBOT_URL=http://chatbot-api:8000
       - SPRING_PROFILES_ACTIVE=prod
       # Permite origens do Angular (local na 4200, Docker/Nginx na 80/4200):
       - CORS_ALLOWED_ORIGINS=http://localhost:4200,http://127.0.0.1:4200,http://localhost:80,http://localhost
     networks:
-      - cultura-network
+      - cybertech-network
     depends_on:
       - chatbot-api
     restart: unless-stopped
 
   # =========================================================================
-  # Serviço Frontend (Angular)
+  # Serviço Frontend (Angular 22)
   # =========================================================================
   frontend:
     build:
       context: .
-      dockerfile: frontend/Dockerfile
-    container_name: cultura-digital-frontend
+      dockerfile: front-end/Dockerfile
+    container_name: cybertech-frontend
     ports:
       - "4200:80"
       - "80:80"
     depends_on:
       - backend
     networks:
-      - cultura-network
+      - cybertech-network
     restart: unless-stopped
 
+  # =========================================================================
+  # Serviço Chatbot API (FastAPI + Groq IA + Base Educativa TXT)
+  # =========================================================================
   chatbot-api:
     build:
       context: .
       dockerfile: chatbot/Dockerfile.api
-    container_name: cultura-digital-chatbot-api
+    container_name: cybertech-chatbot-api
     env_file:
-      - ./chatbot/.env
+      - path: ./.env
+        required: false
+      - path: ./chatbot/.env
+        required: false
     environment:
-      - GROQ_MODEL=${GROQ_MODEL:-openai/gpt-oss-120b}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.3-70b-versatile}
     networks:
-      - cultura-network
+      - cybertech-network
     restart: unless-stopped
 
 networks:
-  cultura-network:
+  cybertech-network:
     driver: bridge

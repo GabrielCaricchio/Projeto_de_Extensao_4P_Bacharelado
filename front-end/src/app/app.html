@@ -1,0 +1,989 @@
+  <a class="skip-link" href="#mainContent">Pular para o conteúdo</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Custom Cyber Targeting Reticle Cursor -->
+  <div class="cyber-cursor" id="cyberCursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="cursor-bracket bracket-tl"></div>
+    <div class="cursor-bracket bracket-tr"></div>
+    <div class="cursor-bracket bracket-bl"></div>
+    <div class="cursor-bracket bracket-br"></div>
+  </div>
+
+  <!-- Ambient Canvas Background (Deep Neural Grid, Dust Particles & Subtle Data Stream) -->
+  <canvas id="bgCanvas" class="bg-canvas"></canvas>
+  <div class="ambient-fog"></div>
+  <div class="scanline-overlay"></div>
+  <div class="vignette-overlay"></div>
+
+  <!-- HUD Tactical Controls (Audio SFX & Alert Tone Switcher) -->
+  <div class="tactical-hud-controls" id="tacticalHud" role="group" aria-label="Controles de áudio e modo de monitoramento">
+    <button class="hud-pill-btn" id="audioToggleBtn" type="button" aria-pressed="false" aria-label="Ativar efeitos sonoros (desligado)" title="Efeitos sonoros opcionais (começam desligados)">
+      <svg class="hud-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M3 8v4h3l4 3.5v-11L6 8H3Z" fill="currentColor"/>
+        <path class="audio-waves" d="M13 7.2a4 4 0 0 1 0 5.6M15.4 5a7 7 0 0 1 0 10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <path class="audio-mute" d="M13 7.5l4.5 5M17.5 7.5l-4.5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span class="hud-label">ÁUDIO <strong id="audioStatusText">OFF</strong></span>
+    </button>
+
+    <div class="defcon-toggle-container">
+      <span class="defcon-label">MODO</span>
+      <button class="defcon-btn active-cyan" id="modeCyanBtn" data-mode="cyan" type="button" aria-pressed="true" aria-label="Modo monitoramento normal">
+        <span class="indicator-dot cyan-dot"></span><span class="defcon-text">NORMAL</span>
+      </button>
+      <button class="defcon-btn" id="modeRedBtn" data-mode="red" type="button" aria-pressed="false" aria-label="Modo alerta de incidente (simulado)">
+        <span class="indicator-dot red-dot"></span><span class="defcon-text">ALERTA</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating Main Navigation Header -->
+  <header class="main-header" id="mainHeader">
+    <div class="header-inner">
+      <a href="#hero" class="brand-logo" id="brandLogo">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 40 40" fill="none" class="shield-svg">
+            <path d="M20 3L6 9V19C6 28 12 34 20 37C28 34 34 28 34 19V9L20 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 11V26M13 18L20 25L27 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="20" cy="19" r="3" fill="currentColor"/>
+          </svg>
+          <div class="logo-pulse"></div>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">CyberTech</span>
+          <span class="brand-tag">SEGURANÇA & IA NAS ESCOLAS</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Início</a></li>
+          <li><a href="#ameacas" class="nav-link">Temas de Segurança</a></li>
+          <li><a href="#chatbot" class="nav-link">CyberBot IA</a></li>
+          <li><a href="#quiz" class="nav-link">Quiz Prático</a></li>
+          <li><a href="#faq" class="nav-link">Perguntas Frequentes</a></li>
+          <li><a href="#canaisAjuda" class="nav-link">Canais de Apoio</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="soc-telemetry-badge">
+          <span class="status-beacon"></span>
+          <span class="badge-text">ESCOLA <strong>CyberTech</strong></span>
+        </div>
+
+        <a href="#chatbot" class="btn btn-outline-cyan btn-sm" id="headerChatbotBtn">
+          <span>CyberBot IA</span>
+        </a>
+
+        <a href="#quiz" class="btn btn-outline-cyan btn-sm" id="headerExploreBtn">
+          <span>Desafio Quiz</span>
+        </a>
+
+        <a href="#canaisAjuda" class="btn btn-primary-cyan btn-sm" id="headerContactBtn">
+          <span>Canais de Ajuda</span>
+          <svg class="arrow-icon" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-link">Início</a></li>
+      <li><a href="#ameacas" class="mobile-link">Temas de Segurança & IA</a></li>
+      <li><a href="#chatbot" class="mobile-link">CyberBot Assistente IA</a></li>
+      <li><a href="#quiz" class="mobile-link">Quiz Prático Interativo</a></li>
+      <li><a href="#faq" class="mobile-link">Perguntas Frequentes</a></li>
+      <li><a href="#canaisAjuda" class="mobile-link">Canais Oficiais de Ajuda</a></li>
+    </ul>
+    <div class="mobile-drawer-actions">
+      <a href="#chatbot" class="btn btn-outline-cyan btn-sm mobile-drawer-btn" id="mobileChatbotBtn">
+        <span>CyberBot IA</span>
+      </a>
+      <a href="#quiz" class="btn btn-outline-cyan btn-sm mobile-drawer-btn" id="mobileExploreBtn">
+        <span>Desafio Quiz</span>
+      </a>
+      <a href="#canaisAjuda" class="btn btn-primary-cyan btn-sm mobile-drawer-btn" id="mobileContactBtn">
+        <span>Canais de Ajuda</span>
+        <svg class="arrow-icon" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- ========================================================
+         SEÇÃO 01 — HERO CINEMATOGRÁFICO
+         (Cultura Digital, Cibersegurança & Uso Responsável de IA)
+         ======================================================== -->
+    <section class="hero-section" id="hero" data-scene="8,123,255">
+      <!-- Camada 1: mapa-múndi em matriz de pontos, rotas e nós -->
+      <canvas id="heroWorldCanvas" class="hero-world-canvas" aria-hidden="true"></canvas>
+
+      <!-- Camada 2: iluminação volumétrica simulada -->
+      <div class="hero-beams" aria-hidden="true"><i class="beam beam-a"></i><i class="beam beam-b"></i><i class="beam beam-c"></i></div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+
+      <!-- Camada 3: painéis técnicos do HUD -->
+      <div class="hero-tech-hud">
+        <aside class="hud-panel hp-feed" data-enter="left" aria-label="Eventos simulados de conscientização">
+          <header class="hp-head"><span class="hp-title">MONITORAMENTO EDUCATIVO</span><span class="hp-sim">ESCOLA</span></header>
+          <ul class="hp-feed-list" id="heroFeedList"></ul>
+        </aside>
+
+        <aside class="hud-panel hp-bars" data-enter="right" aria-label="Carga dos sensores de tráfego">
+          <header class="hp-head"><span class="hp-title">RADAR DE CIDADANIA</span><span class="hp-sim">ATIVO</span></header>
+          <div class="hp-bars-body" id="heroBars"></div>
+          <div class="hp-foot"><span>LAT: -23.5505 (SP)</span><span>REDE: SEGURA</span></div>
+        </aside>
+
+      </div>
+
+      <div class="hero-container">
+        <div class="hero-badge-wrapper entrance-step" id="heroBadge">
+          <div class="hero-pill-badge">
+            <span class="pulsing-shield-icon" aria-hidden="true">🛡️</span>
+            <span class="badge-text">CyberTech // CIBERSEGURANÇA & USO RESPONSÁVEL DA IA</span>
+            <span class="badge-tag">GUIA INTERATIVO</span>
+          </div>
+        </div>
+
+        <h1 class="hero-title" id="heroTitle" aria-label="No mundo digital nenhuma ameaça passa despercebida.">
+          <span class="ht-line ht-accent" aria-hidden="true"><span class="ht-word" style="--i:0">NO</span> <span class="ht-word" style="--i:1">MUNDO</span> <span class="ht-word" style="--i:2">DIGITAL</span></span>
+          <span class="ht-line ht-accent" aria-hidden="true"><span class="ht-word" style="--i:3">NENHUMA</span> <span class="ht-word" style="--i:4">AMEAÇA</span></span>
+          <span class="ht-line ht-accent" aria-hidden="true"><span class="ht-word" style="--i:5">PASSA</span> <span class="ht-word" style="--i:6">DESPERCEBIDA.</span></span>
+        </h1>
+
+        <p class="hero-description entrance-step" id="heroDesc">
+          Um guia didático interativo para crianças, adolescentes, escolas e famílias aprenderem a reconhecer golpes, combater o cyberbullying, checar fake news e utilizar a inteligência artificial com ética e consciência.
+        </p>
+
+        <div class="hero-cta-group entrance-step" id="heroCtas">
+          <a href="#ameacas" class="btn btn-primary-cyan btn-lg glow-pulse btn-magnetic" id="btnExploreThreats">
+            <span>Explorar os 15 Temas Essenciais</span>
+            <svg class="arrow-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+
+          <a href="#quiz" class="btn btn-outline-cyan btn-lg btn-magnetic" id="btnExploreSolutions">
+            <span class="btn-radar-icon" aria-hidden="true"></span>
+            <span>Testar no Quiz Prático</span>
+          </a>
+        </div>
+
+
+        <a href="#ameacas" class="scroll-down-indicator" id="scrollDownIndicator" aria-label="Rolar para os temas">
+          <span class="scroll-text">EXPLORAR CONTEÚDOS</span>
+          <span class="scroll-arrow">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SEÇÃO 02 — OS 11 TEMAS PRINCIPAIS + MÓDULOS DIDÁTICOS
+         (Grade completa com filtros por categoria e modal explicativo)
+         ======================================================== -->
+    <section class="threats-section" id="ameacas" data-scene="255,21,61">
+      <div class="ghost-word ghost-ltr" data-scrub data-ghost aria-hidden="true">TEMAS</div>
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">[ GUIA DIDÁTICO INTERATIVO // 11 TEMAS + MÓDULOS ESSENCIAIS ]</div>
+          <h2 class="section-title">Temas de Cultura Digital e Cibersegurança</h2>
+          <p class="section-subtitle">
+            Do uso consciente de redes sociais e inteligência artificial até a proteção contra golpes, sites falsos e cyberbullying. Clique em qualquer cartão para abrir o guia passo a passo.
+          </p>
+        </div>
+
+        <!-- Filtros de Categorias -->
+        <div class="topic-filter-container">
+          <button class="topic-filter-btn active" data-cat="all" type="button">Todos os Temas (15)</button>
+          <button class="topic-filter-btn" data-cat="golpes" type="button">Golpes, Ameaças & Malware</button>
+          <button class="topic-filter-btn" data-cat="cidadania" type="button">Cidadania, Redes & Cyberbullying</button>
+          <button class="topic-filter-btn" data-cat="ia" type="button">Inteligência Artificial & Estudos</button>
+          <button class="topic-filter-btn" data-cat="defesa" type="button">Higiene Digital, Senhas & Defesa</button>
+        </div>
+
+        <div class="threats-grid" id="threatsGrid">
+
+          <!-- Tema 0: Ameaças Digitais -->
+          <div class="threat-card" data-topic-id="ameacas-digitais" data-cat="golpes" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <path d="M24 4L6 12V22C6 32 14 41 24 44C34 41 42 32 42 22V12L24 4Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M24 16V26M24 32H24.02" stroke="var(--accent-red)" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="threat-badge red-badge">TEMA 00 // VISÃO GERAL</span>
+            <h3 class="threat-card-title">0. Ameaças Digitais</h3>
+            <p class="threat-card-desc">
+              Compreenda o que significa estar em risco online, diferencie vulnerabilidades de ataques reais e conheça os principais perigos a dispositivos, contas e privacidade.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Conceito:</span> <strong>Ameaça vs Vulnerabilidade</strong></div>
+              <div class="detail-row"><span>Defesa:</span> <strong>Hábitos Preventivos & Desconfiança</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Tema 1: Golpes Digitais & Sites Falsos -->
+          <div class="threat-card" data-topic-id="golpes-digitais" data-cat="golpes" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <rect x="6" y="10" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
+                <path d="M6 18H42M16 28H22M30 28H34" stroke="currentColor" stroke-width="2"/>
+                <circle cx="34" cy="28" r="4" fill="var(--accent-red)"/>
+              </svg>
+            </div>
+            <span class="threat-badge red-badge">TEMA 01 // FRAUDES & PIX</span>
+            <h3 class="threat-card-title">1. Golpes Digitais & Sites Falsos</h3>
+            <p class="threat-card-desc">
+              Identifique promoções milagrosas, fraudes envolvendo Pix, lojas virtuais clonadas, falsos itens de games (Robux/Skins) e golpes de recuperação de contas roubadas.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Sinais:</span> <strong>Preços Muito Baixos & Pressão</strong></div>
+              <div class="detail-row"><span>Defesa:</span> <strong>Conferir Titular do Pix & Canais Oficiais</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Tema 2: Cyberbullying -->
+          <div class="threat-card" data-topic-id="cyberbullying" data-cat="cidadania" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <circle cx="24" cy="16" r="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 40C12 32.27 17.37 26 24 26C30.63 26 36 32.27 36 40" stroke="currentColor" stroke-width="2"/>
+                <path d="M36 12L44 20M44 12L36 20" stroke="var(--accent-red)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="threat-badge purple-badge">TEMA 02 // CONVIVÊNCIA ESCOLAR</span>
+            <h3 class="threat-card-title">2. Cyberbullying</h3>
+            <p class="threat-card-desc">
+              Respeito e empatia na comunidade escolar. Reconheça agressões, humilhações em grupos e montagens com IA. Saiba como acolher a vítima e nunca repassar violência.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Papel da Testemunha:</span> <strong>Não Curtir, Não Repassar</strong></div>
+              <div class="detail-row"><span>Apoio:</span> <strong>Guardar Provas & Avisar Escola</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Tema 3: Redes Sociais: Uso Seguro -->
+          <div class="threat-card" data-topic-id="redes-sociais" data-cat="cidadania" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <circle cx="12" cy="16" r="6" stroke="currentColor" stroke-width="2"/>
+                <circle cx="36" cy="16" r="6" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="32" r="7" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 20L21 27M32 20L27 27" stroke="var(--accent-cyan)" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="threat-badge cyan-badge">TEMA 03 // PRIVACIDADE NAS REDES</span>
+            <h3 class="threat-card-title">3. Redes Sociais: Uso Seguro</h3>
+            <p class="threat-card-desc">
+              Aprenda a configurar perfis privados, desligar a localização em tempo real, filtrar seguidores e reconhecer abordagens de estranhos que exigem segredos.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Cuidados:</span> <strong>Uniforme Escolar & Rotinas Ocultas</strong></div>
+              <div class="detail-row"><span>Controle:</span> <strong>Perfil Privado & Filtros de Comentários</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Tema 4: Uso Inadequado e Adequado de IA -->
+          <div class="threat-card" data-topic-id="ia-estudos-seguranca" data-cat="ia" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <rect x="10" y="10" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2"/>
+                <circle cx="19" cy="20" r="3" fill="var(--accent-cyan)"/>
+                <circle cx="29" cy="20" r="3" fill="var(--accent-cyan)"/>
+                <path d="M18 30C20 33 28 33 30 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M24 2V10M10 24H2M46 24H38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="threat-badge green-badge">TEMA 04 // IA NOS ESTUDOS & ÉTICA</span>
+            <h3 class="threat-card-title">4. Uso Adequado e Inadequado de IA</h3>
+            <p class="threat-card-desc">
+              Compreenda como a IA generativa funciona, por que ela alucina (inventa fatos) e como usá-la como tutora para tirar dúvidas sem cair no plágio ou na cópia cega.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Uso Ético:</span> <strong>Tutor Explicador vs Cópia Cega</strong></div>
+              <div class="detail-row"><span>Segurança:</span> <strong>Nunca Inserir Dados Pessoais no Prompt</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Tema 5: Tecnologias para Auxiliar Estudos -->
+          <div class="threat-card" data-topic-id="tecnologias-estudos" data-cat="defesa" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <path d="M8 8H20C22.2 8 24 9.8 24 12V40C24 38.3 22.2 37 20 37H8V8Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M40 8H28C25.8 8 24 9.8 24 12V40C24 38.3 25.8 37 28 37H40V8Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M14 18H18M14 26H18M30 18H34M30 26H34" stroke="var(--accent-cyan)" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="threat-badge green-badge">TEMA 05 // FERRAMENTAS EDUCACIONAIS</span>
+            <h3 class="threat-card-title">5. Tecnologias para Auxiliar Estudos</h3>
+            <p class="threat-card-desc">
+              Descubra ferramentas digitais que enriquecem seu aprendizado: flashcards de repetição espaçada, mapas mentais, simuladores virtuais e recursos de acessibilidade.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Recursos:</span> <strong>Flashcards, Mapas Mentais & Simuladores</strong></div>
+              <div class="detail-row"><span>Postura:</span> <strong>Autonomia Sem Dependência Cega</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Tema 6: Malwares -->
+          <div class="threat-card" data-topic-id="malwares" data-cat="golpes" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <rect x="8" y="10" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2"/>
+                <path d="M18 34V40M30 34V40M12 40H36" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="22" r="6" stroke="var(--accent-red)" stroke-width="2"/>
+                <path d="M21 22H27M24 19V25" stroke="var(--accent-red)" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="threat-badge red-badge">TEMA 06 // VÍRUS & ARQUIVOS</span>
+            <h3 class="threat-card-title">6. Malwares & Arquivos Suspeitos</h3>
+            <p class="threat-card-desc">
+              O que são vírus, spywares, cavalos de Troia e ransomwares. Cuidado com downloads de mods de jogos, pirataria e cheats que infectam computadores e celulares.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Porta de Entrada:</span> <strong>Mods Piratas, Cheats & Torrents</strong></div>
+              <div class="detail-row"><span>Proteção:</span> <strong>Lojas Oficiais & Antivírus Ativo</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Tema 7: Phishing -->
+          <div class="threat-card" data-topic-id="phishing" data-cat="golpes" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <path d="M8 12L24 24L40 12M8 12H40V36H8V12Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M28 28L34 34M34 28L28 34" stroke="var(--accent-red)" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="threat-badge red-badge">TEMA 07 // PESCARIA DE SENHAS</span>
+            <h3 class="threat-card-title">7. Phishing & Páginas Falsas</h3>
+            <p class="threat-card-desc">
+              E-mails, SMS (smishing) e mensagens de WhatsApp clonando páginas de login de escolas e jogos. Aprenda a verificar links e entenda que cadeado HTTPS não garante idoneidade.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Isca Típica:</span> <strong>"Conta Bloqueada em 2h! Clique Aqui"</strong></div>
+              <div class="detail-row"><span>Regra de Ouro:</span> <strong>Digitar a URL Direto no Navegador</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Tema 8: Golpes de Engenharia Social -->
+          <div class="threat-card" data-topic-id="engenharia-social" data-cat="golpes" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <path d="M24 6V18M24 30V42M14 16L34 32M14 32L34 16" stroke="currentColor" stroke-width="2" stroke-dasharray="2 4"/>
+                <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="24" r="4" fill="var(--accent-red)"/>
+              </svg>
+            </div>
+            <span class="threat-badge red-badge">TEMA 08 // MANIPULAÇÃO PSICOLÓGICA</span>
+            <h3 class="threat-card-title">8. Golpes de Engenharia Social</h3>
+            <p class="threat-card-desc">
+              Como golpistas exploram pressa, medo, curiosidade e fingem ser amigos, familiares ou coordenadores para pedir dinheiro urgente e roubar códigos de SMS.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Gatilho:</span> <strong>Pressa, Medo & Pedidos de Segredo</strong></div>
+              <div class="detail-row"><span>Ação Segura:</span> <strong>Pausar, Ligar e Confirmar a Identidade</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Tema 9: Cibersegurança & Hábitos de Defesa -->
+          <div class="threat-card" data-topic-id="ciberseguranca-habitos" data-cat="defesa" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <path d="M24 4L8 12V22C8 32 15 41 24 44C33 41 40 32 40 22V12L24 4Z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="24" r="6" stroke="var(--accent-cyan)" stroke-width="2"/>
+                <path d="M24 30V34" stroke="var(--accent-cyan)" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="threat-badge cyan-badge">TEMA 09 // BLINDAGEM DIGITAL</span>
+            <h3 class="threat-card-title">9. Cibersegurança & Hábitos de Defesa</h3>
+            <p class="threat-card-desc">
+              O guia prático para proteger contas escolares e pessoais: senhas fortes e únicas, gerenciador de senhas, MFA em tudo, atualizações automáticas e cuidados com Wi-Fi público.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Pilares:</span> <strong>Senhas Frases + MFA em Tudo</strong></div>
+              <div class="detail-row"><span>Rotina:</span> <strong>Backups Regulares & Atualizações</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Tema 10: Fake News & Conteúdo Falso com IA -->
+          <div class="threat-card" data-topic-id="fake-news-ia" data-cat="cidadania" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <rect x="6" y="8" width="36" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 16H24M12 22H24M12 28H18" stroke="currentColor" stroke-width="2"/>
+                <rect x="28" y="16" width="10" height="12" stroke="var(--accent-cyan)" stroke-width="2"/>
+                <circle cx="33" cy="22" r="2" fill="var(--accent-red)"/>
+              </svg>
+            </div>
+            <span class="threat-badge purple-badge">TEMA 10 // PENSAMENTO CRÍTICO</span>
+            <h3 class="threat-card-title">10. Fake News & Conteúdo Falso com IA</h3>
+            <p class="threat-card-desc">
+              Desenvolva o método de checagem: identificar manchetes apelativas, checar a fonte original, desmascarar deepfakes em fotos e áudios e nunca repassar boatos sem verificar.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Regra:</span> <strong>Ler Além do Título & Buscar a Fonte</strong></div>
+              <div class="detail-row"><span>Responsabilidade:</span> <strong>Na Dúvida, Não Compartilhar</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Módulo Complementar 11: Senhas & MFA -->
+          <div class="threat-card" data-topic-id="senhas-mfa" data-cat="defesa" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <rect x="12" y="20" width="24" height="20" rx="4" stroke="currentColor" stroke-width="2"/>
+                <path d="M18 20V14C18 10.7 20.7 8 24 8C27.3 8 30 10.7 30 14V20" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="30" r="3" fill="var(--accent-cyan)"/>
+              </svg>
+            </div>
+            <span class="threat-badge cyan-badge">MÓDULO 11 // PROTEÇÃO DE CONTAS</span>
+            <h3 class="threat-card-title">11. Senhas Fortes & MFA</h3>
+            <p class="threat-card-desc">
+              Como construir frases-senha fáceis de lembrar e impossíveis de invadir por robôs, usar aplicativos autenticadores e salvar códigos de recuperação com segurança.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Técnica:</span> <strong>Frases-Senha Longas (+14 caracteres)</strong></div>
+              <div class="detail-row"><span>MFA:</span> <strong>Google Authenticator vs SMS</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Módulo Complementar 12: Privacidade & Pegada Digital -->
+          <div class="threat-card" data-topic-id="privacidade-pegada-digital" data-cat="cidadania" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <path d="M24 8C14 8 6 16 6 24C6 32 14 40 24 40C34 40 42 32 42 24C42 16 34 8 24 8Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 24C16 20 20 16 24 16C28 16 32 20 32 24C32 28 28 32 24 32" stroke="var(--accent-cyan)" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="threat-badge cyan-badge">MÓDULO 12 // HISTÓRIA VIRTUAL</span>
+            <h3 class="threat-card-title">12. Privacidade & Pegada Digital</h3>
+            <p class="threat-card-desc">
+              Tudo o que você posta constrói sua reputação para o futuro. Entenda seus direitos sobre dados pessoais (LGPD), permissões de aplicativos e respeito à imagem de colegas.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Consciência:</span> <strong>Regra dos 10 Segundos Antes de Postar</strong></div>
+              <div class="detail-row"><span>Permissões:</span> <strong>Microfone e Câmera Restritos</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Módulo Complementar 13: Proteção contra Assédio & Aliciamento -->
+          <div class="threat-card" data-topic-id="protecao-assedio" data-cat="cidadania" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <path d="M24 4L8 12V24C8 34 15 42 24 44C33 42 40 34 40 24V12L24 4Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M24 16V28M18 22H30" stroke="var(--accent-red)" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="threat-badge purple-badge">MÓDULO 13 // PROTEÇÃO & ACOLHIMENTO</span>
+            <h3 class="threat-card-title">13. Proteção contra Assédio & Chantagem</h3>
+            <p class="threat-card-desc">
+              Como reconhecer pedidos de segredo, chantagens com fotos ou presentes em jogos. Orientações seguras para interromper o contato, pedir ajuda sem culpa e acionar o Disque 100 e a SaferNet.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Princípio Fundamental:</span> <strong>A Vítima NUNCA Tem Culpa</strong></div>
+              <div class="detail-row"><span>Ação:</span> <strong>Não Ceder, Guardar Prints & Pedir Ajuda</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+          <!-- Módulo Complementar 14: Ética & Cidadania Digital -->
+          <div class="threat-card" data-topic-id="etica-cidadania-digital" data-cat="cidadania" data-tilt>
+            <div class="threat-card-scanline"></div>
+            <div class="threat-icon-box">
+              <svg viewBox="0 0 48 48" fill="none" class="threat-svg">
+                <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 24C12 24 16 16 24 16C32 16 36 24 36 24C36 24 32 32 24 32C16 32 12 24 12 24Z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="24" r="4" fill="var(--accent-cyan)"/>
+              </svg>
+            </div>
+            <span class="threat-badge green-badge">MÓDULO 14 // ÉTICA & COMUNIDADE</span>
+            <h3 class="threat-card-title">14. Ética & Cidadania Digital</h3>
+            <p class="threat-card-desc">
+              Construindo uma internet inclusiva e acolhedora: direitos autorais, combate ao plágio, respeito às diferenças e como usar seu conhecimento para fortalecer a escola.
+            </p>
+            <div class="threat-hover-details">
+              <div class="detail-row"><span>Cidadania:</span> <strong>Direitos, Deveres & Empatia Real</strong></div>
+              <div class="detail-row"><span>Autoria:</span> <strong>Citar Fontes & Respeitar Criadores</strong></div>
+            </div>
+            <button class="btn-open-topic-guide" type="button">
+              <span>Abrir Guia Didático</span><span>➔</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal do Guia Didático de Cada Tema -->
+    <div class="modal-overlay" id="topicModal" role="dialog" aria-modal="true" aria-labelledby="topicModalTitle" aria-hidden="true">
+      <div class="topic-modal-window">
+        <div class="topic-modal-header">
+          <div class="tmh-info">
+            <span class="threat-badge cyan-badge" id="topicModalBadge">TEMA 00</span>
+            <h3 class="tmh-title" id="topicModalTitle">Título do Tema</h3>
+          </div>
+          <button class="modal-close-btn" id="closeTopicModalBtn" type="button" aria-label="Fechar guia didático">✕</button>
+        </div>
+
+        <div class="topic-modal-body">
+          <!-- 01 ENTENDA -->
+          <div class="topic-didactic-block">
+            <span class="topic-didactic-tag">01 // ENTENDA</span>
+            <h4 class="topic-didactic-heading" id="topicModalEntendaTitle">O que é?</h4>
+            <p class="topic-didactic-text" id="topicModalEntendaText"></p>
+            <div class="topic-highlight-concept" id="topicModalEntendaConcept"></div>
+          </div>
+
+          <!-- 02 RECONHEÇA -->
+          <div class="topic-didactic-block alert-block">
+            <span class="topic-didactic-tag text-red">02 // RECONHEÇA</span>
+            <h4 class="topic-didactic-heading">Como Costuma Ocorrer & Sinais de Alerta</h4>
+            <div id="topicModalExemplos"></div>
+          </div>
+
+          <!-- 03 PREVINA-SE -->
+          <div class="topic-didactic-block success-block">
+            <span class="topic-didactic-tag text-success">03 // PREVINA-SE</span>
+            <h4 class="topic-didactic-heading">Como se Proteger no Dia a Dia</h4>
+            <ul class="topic-list-items" id="topicModalPrevinaseList"></ul>
+          </div>
+
+          <!-- 04 SAIBA AGIR -->
+          <div class="topic-didactic-block purple-block">
+            <span class="topic-didactic-tag">04 // SAIBA AGIR</span>
+            <h4 class="topic-didactic-heading">E se Acontecer Comigo ou com um Amigo?</h4>
+            <ul class="topic-list-items" id="topicModalSaibaAgirList"></ul>
+            <div class="topic-highlight-concept" style="color: #C084FC;" id="topicModalAcolhimento"></div>
+          </div>
+
+          <!-- 05 REVISE -->
+          <div class="topic-didactic-block">
+            <span class="topic-didactic-tag">05 // REVISE</span>
+            <h4 class="topic-didactic-heading">Checklist Resumido</h4>
+            <ul class="topic-list-items" id="topicModalChecklist"></ul>
+          </div>
+        </div>
+
+        <div class="topic-modal-footer">
+          <a href="#quiz" class="btn btn-primary-cyan btn-sm" id="btnGoToQuizFromModal">
+            <span>Praticar no Quiz ➔</span>
+          </a>
+          <button class="btn btn-outline-cyan btn-sm" id="btnAskBotAboutTopic" type="button">
+            <span>💬 Perguntar ao CyberBot</span>
+          </button>
+          <button class="btn btn-ghost-sm" id="btnDismissTopicModal" type="button">Fechar Guia</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         SEÇÃO — CHATBOT EDUCATIVO CYBERTECH
+         (Assistente Inteligente Conectado aos Conteúdos Oficiais)
+         ======================================================== -->
+    <section class="chatbot-section" id="chatbot" data-scene="0,229,255">
+      <div class="ghost-word ghost-rtl" data-scrub data-ghost aria-hidden="true">CHATBOT</div>
+      <div class="container">
+        <header class="section-header text-center">
+          <div class="section-tag-wrapper">
+            <span class="section-tag"><i class="tag-dot"></i> ASSISTENTE EDUCATIVO COM IA</span>
+          </div>
+          <h2 class="section-title">CyberBot // Dúvidas em Segurança Digital</h2>
+          <p class="section-subtitle">
+            Converse em tempo real com o assistente da <strong>CyberTech</strong>. Ele utiliza os conteúdos educativos oficiais e IA da Groq para orientar você, sua família e sua escola.
+          </p>
+        </header>
+
+        <div class="chatbot-container">
+          <!-- Cabeçalho do Card do Chatbot -->
+          <div class="chatbot-hud-header">
+            <div class="chatbot-agent-info">
+              <div class="agent-avatar-glow">
+                <span class="agent-avatar-emoji">🤖</span>
+                <span class="avatar-online-dot"></span>
+              </div>
+              <div class="agent-meta">
+                <div class="agent-name-row">
+                  <strong class="agent-name">CyberBot Educativo</strong>
+                  <span class="agent-badge">IA CYBERTECH</span>
+                </div>
+                <span class="agent-status-desc">Pronto para responder • Base: Conteúdos Educativos & Groq IA</span>
+              </div>
+            </div>
+            <div class="chatbot-telemetry-badge">
+              <span class="telemetry-status-light"></span>
+              <span class="telemetry-text">BACKEND SPRING BOOT: <strong>ONLINE</strong></span>
+            </div>
+          </div>
+
+          <!-- Sugestões de Perguntas Rápidas (Chips Clicáveis) -->
+          <div class="chatbot-suggestions-bar">
+            <span class="suggestions-label">⚡ PERGUNTAS RÁPIDAS:</span>
+            <div class="suggestions-chips-container" id="chatChipsContainer">
+              <button class="suggestion-chip" type="button" data-prompt="O que é phishing e como reconhecer links falsos?">🎣 O que é phishing?</button>
+              <button class="suggestion-chip" type="button" data-prompt="Como saber se um pedido de Pix é golpe?">💳 Como não cair no golpe do Pix?</button>
+              <button class="suggestion-chip" type="button" data-prompt="Dicas da CyberTech para criar senhas fortes e ativar MFA">🔐 Dicas para criar senha forte</button>
+              <button class="suggestion-chip" type="button" data-prompt="O que fazer se eu ou alguém sofrer cyberbullying?">🤝 O que fazer em caso de cyberbullying?</button>
+              <button class="suggestion-chip" type="button" data-prompt="Como usar inteligência artificial nos estudos de forma ética sem colar?">🤖 Como usar IA nos estudos com ética?</button>
+              <button class="suggestion-chip" type="button" data-prompt="Como identificar vírus e malwares em jogos e downloads?">🦠 Como evitar vírus no celular e PC?</button>
+            </div>
+          </div>
+
+          <!-- Janela de Conversa / Histórico -->
+          <div class="chatbot-messages-feed" id="chatMessagesFeed" role="log" aria-live="polite">
+            <!-- Mensagem de Boas-vindas -->
+            <div class="chat-bubble-row bot-row">
+              <div class="chat-avatar bot-avatar">🤖</div>
+              <div class="chat-bubble bot-bubble">
+                <p>Olá! Eu sou o <strong>CyberBot</strong>, assistente de segurança digital da <strong>CyberTech</strong>! 🛡️✨</p>
+                <p>Estou conectado aos conteúdos pedagógicos para te ajudar a se proteger de golpes, combater o cyberbullying, criar senhas fortes e utilizar a IA com responsabilidade. Qual dúvida você quer tirar hoje?</p>
+                <span class="chat-time">Agora</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Indicador de Carregamento (Digitando...) -->
+          <div class="chatbot-typing-indicator" id="chatTypingIndicator" style="display: none;">
+            <div class="chat-avatar bot-avatar">🤖</div>
+            <div class="typing-bubble">
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+              <span class="typing-text">CyberBot está consultando o conteúdo educativo...</span>
+            </div>
+          </div>
+
+          <!-- Barra de Entrada e Envio -->
+          <form class="chatbot-input-bar" id="chatForm">
+            <div class="input-wrapper">
+              <input type="text"
+                     id="chatInputText"
+                     class="chat-text-input"
+                     placeholder="Digite sua dúvida sobre segurança na internet..."
+                     autocomplete="off"
+                     aria-label="Mensagem para o CyberBot">
+              <button type="submit" class="btn btn-primary-cyan btn-chat-send" id="chatSendBtn" aria-label="Enviar mensagem">
+                <span>Enviar</span>
+                <svg class="send-icon" viewBox="0 0 20 20" fill="none">
+                  <path d="M3 10L17 3L10 17L9 11L3 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="chat-privacy-hint">
+              <span>🔒 Ambiente educativo seguro CyberTech. Não digite senhas reais nem informações pessoais confidenciais.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SEÇÃO PRÁTICA — QUIZ PRÁTICO INTERATIVO DE CULTURA DIGITAL
+         (Desafio com 5 perguntas reais e feedback pedagógico)
+         ======================================================== -->
+    <section class="quiz-section" id="quiz" data-scene="0,229,255">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">[ DESAFIO PRÁTICO INTERATIVO ]</div>
+          <h2 class="section-title">Quiz de Cultura Digital & Segurança</h2>
+          <p class="section-subtitle">
+            Teste seus reflexos resolvendo situações reais do cotidiano escolar, redes sociais e inteligência artificial.
+          </p>
+        </div>
+
+        <div class="quiz-card">
+          <div id="quizCardBody">
+            <div class="quiz-card-header">
+              <span class="quiz-step-indicator" id="quizStepIndicator">PERGUNTA 1 DE 5</span>
+              <span class="quiz-score-badge" id="quizScoreText">PONTUAÇÃO: 0 / 5</span>
+            </div>
+
+            <div class="quiz-scenario-box">
+              <span class="badge-tag" style="padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; margin-bottom: 6px; display: inline-block;">SITUAÇÃO COTIDIANA</span>
+              <p id="quizScenarioText"></p>
+            </div>
+
+            <h3 class="quiz-question-title" id="quizQuestionTitle"></h3>
+
+            <div class="quiz-options-list" id="quizOptionsContainer"></div>
+
+            <div class="quiz-feedback-box" id="quizFeedbackBox">
+              <strong id="quizFeedbackTitle" style="display: block; margin-bottom: 6px;"></strong>
+              <span id="quizFeedbackExplanation"></span>
+            </div>
+
+            <div class="quiz-controls">
+              <button class="btn btn-primary-cyan btn-md" id="quizNextBtn" type="button" style="display: none;">
+                <span>Próxima Pergunta</span>
+                <svg class="arrow-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="quiz-completed-box" id="quizCompletedBox" style="display: none;">
+            <div class="quiz-completed-badge" id="quizCompletedIcon">🛡️</div>
+            <h3 class="quiz-final-score" id="quizFinalScoreText">5 de 5 Corretas!</h3>
+            <p class="quiz-final-feedback" id="quizFinalFeedbackText"></p>
+            <button class="btn btn-primary-cyan btn-md" id="quizRestartBtn" type="button">
+              <span>Reiniciar Desafio ↺</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SEÇÃO 12 — PERGUNTAS FREQUENTES (FAQ ACORDEÃO)
+         (6 questões essenciais do briefing com respostas acessíveis)
+         ======================================================== -->
+    <section class="faq-section" id="faq" data-scene="8,123,255">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">[ ESCLARECIMENTOS PEDAGÓGICOS ]</div>
+          <h2 class="section-title">Perguntas Frequentes</h2>
+          <p class="section-subtitle">
+            Respostas diretas e acessíveis sobre proteção, uso responsável da internet e convivência digital nas escolas.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button class="faq-trigger" aria-expanded="true" type="button">
+              <span class="faq-bracket">[</span>
+              <span class="faq-title">O que é cibersegurança e cultura digital para estudantes e escolas?</span>
+              <span class="faq-bracket">]</span>
+              <span class="faq-chevron">−</span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Cultura digital nas escolas é o aprendizado de utilizar a tecnologia, as redes e a inteligência artificial com consciência crítica, ética, responsabilidade e empatia. Cibersegurança, nesse contexto, não é um assunto complexo para programadores avançados: é o conjunto de hábitos diários que ensina estudantes a proteger suas contas, criar senhas fortes, identificar situações perigosas e saber a quem recorrer quando algo der errado.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" type="button">
+              <span class="faq-bracket">[</span>
+              <span class="faq-title">Como saber se uma mensagem, promoção ou Pix é golpe?</span>
+              <span class="faq-bracket">]</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Fique atento a três sinais clássicos de fraude: <strong>urgência extrema</strong> ("faça agora ou perderá o acesso"), <strong>promessas milagrosas</strong> (descontos de 90%, moedas grátis de jogos ou dinheiro fácil) e <strong>pedidos de códigos de verificação</strong> recebidos por SMS. Antes de fazer qualquer Pix, confira atentamente o nome e dados do titular na tela de confirmação. Na dúvida, converse com um adulto antes de qualquer pagamento.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" type="button">
+              <span class="faq-bracket">[</span>
+              <span class="faq-title">O que fazer ao presenciar ou sofrer cyberbullying na internet?</span>
+              <span class="faq-bracket">]</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-content">
+              <p>
+                1. <strong>Não revide</strong>: responder com outra agressão só aumenta a violência.<br>
+                2. <strong>Guarde provas</strong>: tire capturas de tela (prints) mostrando nomes de perfis, datas e horários.<br>
+                3. <strong>Bloqueie e denuncie</strong> o agressor na própria rede social.<br>
+                4. <strong>Avise um adulto de confiança</strong> e a direção da escola.<br>
+                5. <strong>Se você é testemunha</strong>: não curta nem repasse a humilhação; apoie o colega no privado. Lembre-se: a vítima nunca é culpada pelo ataque.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" type="button">
+              <span class="faq-bracket">[</span>
+              <span class="faq-title">Como usar Inteligência Artificial (ChatGPT, Gemini) nos estudos de forma ética?</span>
+              <span class="faq-bracket">]</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Use a IA como uma <strong>tutora particular</strong>: peça para ela explicar conceitos difíceis com analogias simples, sugerir exercícios de fixação ou ajudar a montar um cronograma de estudos. O que NÃO fazer: copiar e colar textos inteiros entregando como se fossem seus (isso é plágio e impede você de aprender). Lembre-se também de que a IA pode "alucinar" (inventar fatos errados), então sempre confira os dados em livros didáticos.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" type="button">
+              <span class="faq-bracket">[</span>
+              <span class="faq-title">Como criar senhas realmente fortes e o que é verificação em duas etapas (MFA)?</span>
+              <span class="faq-bracket">]</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Em vez de palavras curtas, crie <strong>frases-senha</strong> com mais de 14 caracteres (exemplo: <em>MeuCachorroBobAdoraPipoca2026!</em>). A verificação em duas etapas (MFA ou 2FA) adiciona uma segunda fechadura à sua conta: além da senha, é exigido um código gerado no seu celular por um aplicativo autenticador. Mesmo se um golpista adivinhar sua senha, ele não conseguirá entrar sem esse segundo fator.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" type="button">
+              <span class="faq-bracket">[</span>
+              <span class="faq-title">Como identificar se uma notícia, foto ou vídeo é fake news criada com IA?</span>
+              <span class="faq-bracket">]</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Desconfie de títulos alarmistas que provocam medo ou indignação exagerados. Pesquise a notícia em mais de um portal jornalístico independente: acontecimentos reais importantes são noticiados por múltiplos veículos. Em fotos e vídeos gerados por IA, repare em detalhes não naturais (mãos com dedos a mais, letras sem sentido em placas, olhares fixos e vozes com respiração metálica). Na dúvida, <strong>não compartilhe</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SEÇÃO 13 — CANAIS OFICIAIS DE AJUDA & DENÚNCIA
+         (SaferNet, Disque 100, CERT.br e UNICEF)
+         ======================================================== -->
+    <section class="help-channels-section" id="canaisAjuda" data-scene="8,123,255">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">[ REDE DE APOIO & PROTEÇÃO INTEGRAL ]</div>
+          <h2 class="section-title">Canais Oficiais de Ajuda e Denúncia no Brasil</h2>
+          <p class="section-subtitle">
+            Se você ou alguém próximo estiver sofrendo ameaças, chantagens, perseguições ou cyberbullying, procure ajuda imediatamente. O atendimento é gratuito, sigiloso e sem qualquer julgamento.
+          </p>
+        </div>
+
+        <div class="help-channels-grid">
+          <a href="https://new.safernet.org.br/helpline" target="_blank" rel="noopener noreferrer" class="help-channel-card">
+            <div class="hcc-top">
+              <span class="hcc-icon">💬</span>
+              <span class="hcc-name">Helpline SaferNet</span>
+            </div>
+            <p class="hcc-desc">Canal gratuito e sigiloso de escuta psicológica para tirar dúvidas sobre convivência, privacidade, vazamento de imagens e bem-estar nas redes.</p>
+            <span class="hcc-action">Acessar Helpline Oficial ➔</span>
+          </a>
+
+          <a href="https://new.safernet.org.br/denuncie" target="_blank" rel="noopener noreferrer" class="help-channel-card">
+            <div class="hcc-top">
+              <span class="hcc-icon">🚨</span>
+              <span class="hcc-name">Denúncias SaferNet</span>
+            </div>
+            <p class="hcc-desc">Central nacional para registrar denúncias anônimas de crimes cibernéticos contra crianças e adolescentes, racismo, ódio e apologia a crimes.</p>
+            <span class="hcc-action">Registrar Denúncia Anônima ➔</span>
+          </a>
+
+          <a href="https://www.gov.br/mdh/pt-br/ondh" target="_blank" rel="noopener noreferrer" class="help-channel-card">
+            <div class="hcc-top">
+              <span class="hcc-icon">📞</span>
+              <span class="hcc-name">Disque 100</span>
+            </div>
+            <p class="hcc-desc">Disque Direitos Humanos: serviço público federal gratuito disponível 24 horas por dia para denunciar qualquer violação de direitos infantojuvenis.</p>
+            <span class="hcc-action">Ligue 100 (Ligação Gratuita) ➔</span>
+          </a>
+
+          <a href="https://cartilha.cert.br/" target="_blank" rel="noopener noreferrer" class="help-channel-card">
+            <div class="hcc-top">
+              <span class="hcc-icon">📖</span>
+              <span class="hcc-name">Cartilha CERT.br</span>
+            </div>
+            <p class="hcc-desc">Guia oficial brasileiro elaborado pelo NIC.br com orientações didáticas sobre segurança para internet, proteção de contas, fraudes e IA.</p>
+            <span class="hcc-action">Ler Cartilha Completa ➔</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="main-footer" id="mainFooter">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="#hero" aria-label="CyberTech — voltar ao início">
+        <span aria-hidden="true">🛡️</span>
+        <span>CyberTech</span>
+      </a>
+
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <a href="#ameacas">Temas</a>
+        <a href="#chatbot">CyberBot</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#faq">Perguntas frequentes</a>
+      </nav>
+
+      <div class="footer-copy">
+        © 2026 CyberTech nas Escolas
+      </div>
+    </div>
+  </footer>

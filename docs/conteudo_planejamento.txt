@@ -1,0 +1,785 @@
+Estrutura de assuntos gerais (adaptar dependendo do assunto):
+- O que são? 
+- Quais os principais tipos e exemplos 
+- Como se proteger
+- O que fazer quando sofrer um
+- Como costuma ocorrer e como identificar 
+
+Resumo:
+- Conceitos e exemplos 
+
+Conteúdos:
+0. Ameaças Digitais
+1. Golpes Digitais
+2. Cyberbullying 
+3. Redes sociais (uso seguro de redes sociais)
+4. Uso inadequado e uso adequado de IA (nos estudos e em cibersegurança)
+5. Tecnologias para auxiliar estudos (e como a IA pode contribuir) 
+6. Malwares 
+7. Phishing 
+8. Golpes de engenharia social
+9. Cibersegurança
+10. Fake news (e conteúdo falso ou incorreto criado com IA)
+
+ai poderia abordar desde coisa como MFA senhas fortes, verificar links , não fazer download em sites desconhecidos , não divulgar informações sensiveis, verificar sempre e se prevenir, não confiar  sempre (duvidar e verificar), golpes digitais, cuidado com urgências e pix, etc
+
+não precisa fazer um livro de cada um e não precisa ser um conteúdo super técnico de anti hacker, é um material para o pessoal que for leigo sobre o assunto e crianças/adolescentes (já que a gente tá trabalhando dentro do tema cultura digital nas escolas).
+
+Instruções para executar a tarefa
+
+1. Use o briefing abaixo como fonte principal do escopo. Preserve os temas, objetivos e orientações relevantes; não elimine assuntos importantes sem justificar.
+2. Escreva em português brasileiro, com linguagem simples, direta e adequada a crianças e adolescentes. Explique termos técnicos na primeira ocorrência e utilize exemplos cotidianos e fictícios.
+3. Priorize educação preventiva e orientações acionáveis. O objetivo é ensinar o público a reconhecer riscos, verificar situações suspeitas, proteger-se e pedir ajuda — não produzir um manual técnico de cibersegurança.
+4. Não culpabilize vítimas. Em situações de assédio, chantagem, cyberbullying ou abuso, recomende interromper o contato quando for seguro, preservar evidências sem redistribuir conteúdo prejudicial, denunciar e procurar um adulto de confiança ou serviço apropriado.
+5. Não inclua imagens explícitas, descrições gráficas ou instruções que facilitem golpes, invasões, assédio ou outros danos. Explique os riscos de modo seguro e apropriado à idade.
+6. Diferencie fatos verificados de recomendações gerais. Não invente estatísticas, leis, políticas de plataformas, fontes ou canais de denúncia. Quando a tarefa depender de informações atuais, pesquise fontes confiáveis e inclua links para as fontes utilizadas.
+7. Reduza redundâncias entre os temas, mas mantenha referências cruzadas quando um assunto aparecer em mais de uma página. Se identificar lacunas, sobreposições ou imprecisões importantes no briefing, sinalize-as e proponha ajustes sem alterar silenciosamente o escopo.
+8. Sempre que produzir uma página, use como referência a estrutura didática descrita no briefing, adaptando os subtópicos à natureza do assunto. Inclua exemplos e atividades práticas quando forem úteis.
+9. Se a solicitação pedir uma entrega extensa, organize-a por seções claras e mantenha consistência de terminologia, profundidade e formato.
+
+## Briefing do projeto
+
+Planejamento de conteúdo — Segurança digital, cidadania digital e uso responsável da IA
+
+O objetivo do site é ensinar crianças e adolescentes a utilizar a internet, as redes sociais e a inteligência artificial de forma segura, consciente, crítica e responsável, com linguagem simples, exemplos do cotidiano e orientações práticas.
+
+A proposta não é criar um material técnico de cibersegurança, mas ensinar o público a reconhecer riscos, prevenir problemas, tomar boas decisões e saber a quem recorrer quando algo acontecer.
+
+## 1. Padrão de organização dos conteúdos
+
+Para manter a consistência entre os materiais produzidos pela equipe, cada assunto deve seguir uma estrutura adaptável:
+
+- O que é? — Explicação simples do conceito.
+- Principais tipos e exemplos — Situações que crianças e adolescentes podem encontrar na internet.
+- Como costuma ocorrer e como identificar? — Sinais de alerta, comportamentos suspeitos e situações de risco.
+- Como se proteger? — Hábitos preventivos, configurações e ferramentas de segurança.
+- O que fazer quando acontecer? — Passos práticos para reagir, denunciar e buscar ajuda.
+- Resumo — Conceitos essenciais, exemplos e principais recomendações.
+
+Nem todos os tópicos precisam ter exatamente os mesmos subtópicos. Por exemplo, em tecnologias para os estudos, faz mais sentido explicar como utilizar as ferramentas do que abordar como denunciar um incidente.
+
+## 2. Conteúdos principais (11 temas; identificadores originais de 0 a 10)
+
+### 0. Ameaças Digitais
+
+Objetivo: apresentar uma visão geral dos riscos existentes na internet, ensinando os estudantes a reconhecer situações perigosas e adotar hábitos de prevenção.
+
+**Pontos a abordar:**
+
+**O que são ameaças digitais?**
+
+- O que significa estar em risco no ambiente digital.
+- Diferença entre ameaça, vulnerabilidade, ataque e incidente de segurança, usando explicações simples.
+- Como as ameaças podem afetar dispositivos, contas, dinheiro, informações pessoais e pessoas.
+
+**Quais os principais tipos e exemplos?**
+
+- Roubo de contas e senhas.
+- Golpes financeiros e falsas promoções.
+- Vírus e outros programas maliciosos.
+- Phishing e mensagens fraudulentas.
+- Cyberbullying, assédio e ameaças.
+- Exposição de dados pessoais e perda de privacidade.
+- Perfis falsos e pessoas que fingem ser quem não são.
+- Manipulação por meio de imagens, áudios e vídeos falsos criados com IA.
+- Aliciamento, chantagem e pedidos inadequados de imagens íntimas.
+
+**Como costumam ocorrer e como identificar?**
+
+- Mensagens inesperadas com links ou anexos.
+- Pedidos de senhas, códigos de verificação ou informações pessoais.
+- Promessas de prêmios, dinheiro fácil ou vantagens extraordinárias.
+- Pessoas que pressionam para manter conversas em segredo.
+- Pedidos urgentes, ameaças ou tentativas de provocar medo.
+- Aplicativos e sites que solicitam permissões sem necessidade aparente.
+
+**Como se proteger?**
+
+- Utilizar senhas fortes e diferentes para cada conta importante.
+- Ativar a autenticação multifator (MFA).
+- Verificar links, remetentes e endereços de sites.
+- Manter dispositivos, aplicativos e sistemas atualizados.
+- Evitar downloads de fontes desconhecidas.
+- Restringir a divulgação de informações pessoais.
+- Desconfiar de situações suspeitas e verificar antes de agir.
+- Conversar com um adulto de confiança quando houver dúvida.
+
+**O que fazer quando sofrer uma ameaça?**
+
+- Interromper a interação suspeita.
+- Bloquear e denunciar contas ou conteúdos maliciosos.
+- Alterar senhas e proteger contas comprometidas.
+- Avisar um adulto de confiança e, quando necessário, a escola.
+- Guardar informações relevantes para a denúncia, sem redistribuir conteúdos prejudiciais.
+- Saber quando procurar ajuda especializada ou autoridades.
+
+Resumo: os riscos digitais mais comuns, seus sinais de alerta e os hábitos básicos que ajudam a evitar problemas.
+
+### 1. Golpes Digitais
+
+Objetivo: ensinar os estudantes a reconhecer tentativas de fraude e evitar prejuízos financeiros, roubo de contas e exposição de dados.
+
+**Pontos a abordar:**
+
+**O que são golpes digitais?**
+
+- Como alguém pode enganar outra pessoa pela internet para conseguir dinheiro, dados, acesso a contas ou alguma vantagem.
+- Diferença entre um golpe, um erro comum e uma tentativa de invasão.
+
+**Quais os principais tipos e exemplos?**
+
+- Falsas promoções, sorteios e brindes.
+- Lojas virtuais falsas e produtos que nunca são entregues.
+- Falsos prêmios que exigem pagamento de uma taxa.
+- Golpes envolvendo Pix, transferências e boletos falsos.
+- Perfis falsos de amigos, familiares, influenciadores ou empresas.
+- Falsas vagas de emprego, cursos e oportunidades.
+- Golpes em jogos online, moedas virtuais e itens de jogos.
+- Falsos pedidos de ajuda financeira.
+- Golpes de recuperação de conta, nos quais alguém cobra para devolver um perfil roubado.
+- Mensagens e ligações com voz ou imagem clonada por IA.
+
+**Como costumam ocorrer e como identificar?**
+
+- Ofertas muito vantajosas ou preços muito abaixo do normal.
+- Pedidos de pagamento antecipado sem garantias.
+- Pressão para pagar imediatamente.
+- Solicitação de códigos enviados por SMS ou aplicativos.
+- Chaves Pix ou dados de pagamento incompatíveis com o vendedor.
+- Perfis recém-criados, comentários suspeitos ou avaliações possivelmente falsas.
+- Mensagens que imitam empresas e pessoas conhecidas.
+
+**Como se proteger?**
+
+- Pesquisar a reputação da loja ou do vendedor.
+- Conferir o destinatário, o valor e os dados antes de confirmar um Pix.
+- Confirmar pedidos de dinheiro por outro canal conhecido.
+- Não compartilhar senhas, códigos de autenticação ou dados bancários.
+- Não pagar taxas para receber prêmios inesperados sem verificar sua legitimidade.
+- Comprar por canais oficiais e utilizar meios de pagamento seguros.
+- Não confiar apenas em imagens, depoimentos ou áudios como prova de autenticidade.
+
+**O que fazer quando sofrer um golpe?**
+
+- Avisar imediatamente um responsável.
+- Entrar em contato com o banco ou instituição de pagamento pelos canais oficiais, caso haja movimentação financeira.
+- Solicitar orientação sobre mecanismos de contestação ou recuperação aplicáveis ao caso.
+- Trocar senhas e proteger contas afetadas.
+- Guardar comprovantes, mensagens e dados relevantes.
+- Registrar denúncia nos canais adequados e, quando necessário, procurar as autoridades.
+
+Resumo: sinais comuns de fraude, cuidados antes de pagar e primeiros passos após cair em um golpe.
+
+### 2. Cyberbullying
+
+Objetivo: promover respeito, empatia e responsabilidade no ambiente digital, ensinando a reconhecer, prevenir e enfrentar a violência online.
+
+**Pontos a abordar:**
+
+**O que é cyberbullying?**
+
+- O que caracteriza o bullying praticado por meios digitais.
+- Diferença entre brincadeira consentida, conflito pontual e comportamento de humilhação ou perseguição.
+- Como as agressões podem continuar fora da escola e alcançar muitas pessoas.
+- Por que curtir, comentar ou compartilhar uma agressão também pode contribuir para o problema.
+
+**Quais os principais tipos e exemplos?**
+
+- Insultos e humilhações em comentários.
+- Apelidos ofensivos e perseguição em grupos.
+- Divulgação de boatos para prejudicar alguém.
+- Exclusão intencional de grupos para humilhar.
+- Criação de perfis falsos para atacar uma pessoa.
+- Divulgação de fotos, vídeos ou conversas privadas sem consentimento.
+- Montagens e memes ofensivos.
+- Uso de IA para criar imagens falsas com o objetivo de humilhar, ameaçar ou constranger.
+- Ameaças, perseguição e chantagem.
+
+**Como costuma ocorrer e como identificar?**
+
+- Mensagens ofensivas repetidas ou perseguição persistente.
+- Publicações destinadas a expor ou ridicularizar alguém.
+- Pressão coletiva para atacar ou excluir uma pessoa.
+- Compartilhamento de conteúdos privados sem autorização.
+- Medo de acessar grupos, jogos ou redes sociais.
+- Mudanças de comportamento, isolamento ou sofrimento associados às interações online.
+
+**Como se proteger e prevenir?**
+
+- Tratar os outros com respeito, inclusive em discussões.
+- Pensar antes de publicar ou compartilhar algo sobre outra pessoa.
+- Respeitar limites e consentimento.
+- Configurar privacidade, comentários e mensagens.
+- Não participar de ataques nem compartilhar conteúdos humilhantes.
+- Incentivar testemunhas a apoiar a vítima e comunicar a situação a alguém responsável.
+
+**O que fazer quando sofrer ou presenciar cyberbullying?**
+
+- Não responder impulsivamente nem revidar com outra agressão.
+- Guardar evidências relevantes, como mensagens, links e datas.
+- Bloquear e denunciar os responsáveis na plataforma.
+- Informar um adulto de confiança e a escola quando houver relação com o ambiente escolar.
+- Procurar ajuda se houver ameaças, perseguição ou divulgação de conteúdo íntimo.
+- Não compartilhar imagens íntimas de crianças ou adolescentes, mesmo com a intenção de denunciar.
+- Entender que a vítima não é culpada pela agressão.
+
+Resumo: respeito digital, identificação de agressões, papel das testemunhas e caminhos para pedir ajuda.
+
+### 3. Redes sociais: uso seguro
+
+Objetivo: ensinar os estudantes a utilizar redes sociais de forma consciente, protegendo a privacidade, a identidade digital e o bem-estar.
+
+**Pontos a abordar:**
+
+**O que são redes sociais e como funcionam?**
+
+- Perfis, publicações, comentários, mensagens privadas e seguidores.
+- Diferença entre perfil público e privado.
+- Como curtidas, compartilhamentos e recomendações influenciam o que vemos.
+- Por que uma publicação pode continuar circulando mesmo depois de ser apagada.
+
+**Quais os principais riscos e exemplos?**
+
+- Exposição de informações pessoais.
+- Contato com desconhecidos e perfis falsos.
+- Golpes e links maliciosos.
+- Cyberbullying e discursos de ódio.
+- Desafios perigosos e tendências prejudiciais.
+- Compartilhamento não autorizado de fotos e vídeos.
+- Pressão por curtidas, aparência e popularidade.
+- Exposição da localização, da rotina e dos locais frequentados.
+- Publicidade enganosa, conteúdos patrocinados e recomendações manipuladoras.
+
+**Como identificar situações de risco?**
+
+- Perfis que solicitam informações íntimas ou financeiras.
+- Pessoas que tentam criar intimidade rapidamente ou exigem segredo.
+- Publicações que provocam medo de ficar de fora de um grupo.
+- Pedidos para migrar para conversas privadas com comportamento suspeito.
+- Publicações que mostram localização em tempo real ou dados identificáveis.
+
+**Como se proteger?**
+
+- Configurar quem pode ver publicações, comentar e enviar mensagens.
+- Revisar seguidores e remover contatos desconhecidos.
+- Evitar divulgar endereço, escola, telefone, documentos e rotina.
+- Desativar o compartilhamento de localização quando desnecessário.
+- Utilizar senhas fortes e MFA.
+- Verificar permissões dos aplicativos e configurações de privacidade.
+- Respeitar os limites de idade das plataformas.
+- Avaliar como uma publicação pode afetar a própria segurança e a de outras pessoas.
+- Desenvolver hábitos saudáveis de uso e fazer pausas quando necessário.
+
+**O que fazer diante de problemas?**
+
+- Bloquear e denunciar perfis suspeitos.
+- Remover ou restringir publicações que exponham dados pessoais.
+- Preservar evidências de ameaças e abusos.
+- Avisar um adulto de confiança em situações de assédio, chantagem ou perigo.
+- Recuperar e proteger a conta caso ela seja invadida.
+
+Resumo: privacidade, reputação digital, segurança de perfis, interação respeitosa e uso equilibrado das redes.
+
+### 4. Uso inadequado e uso adequado de IA — estudos e cibersegurança
+
+Objetivo: ensinar os estudantes a compreender os limites da inteligência artificial, utilizá-la de maneira ética e reconhecer os riscos de seu uso malicioso.
+
+**Pontos a abordar:**
+
+**O que é inteligência artificial?**
+
+- Explicação simples sobre sistemas capazes de gerar textos, imagens, áudios, vídeos e respostas.
+- Diferença entre uma ferramenta de IA e uma pessoa.
+- Por que a IA pode produzir respostas convincentes, mas incorretas.
+- Diferença entre IA generativa e outras aplicações de IA, com exemplos acessíveis.
+
+**Quais os usos adequados e inadequados?**
+
+- Uso adequado: esclarecer dúvidas, explicar conteúdos, sugerir exercícios e ajudar a organizar estudos.
+- Uso adequado: revisar textos, gerar exemplos e apoiar a aprendizagem de programação.
+- Uso inadequado: copiar respostas sem compreender o conteúdo.
+- Uso inadequado: entregar trabalhos produzidos por IA como se fossem inteiramente próprios, contrariando as regras da atividade.
+- Uso inadequado: criar montagens para humilhar colegas.
+- Uso inadequado: produzir fraudes, falsificações, mensagens de phishing ou conteúdo enganoso.
+- Uso inadequado: utilizar IA para tentar invadir contas ou prejudicar outras pessoas.
+
+**Como a IA pode ser utilizada em golpes e ataques?**
+
+- Mensagens fraudulentas mais convincentes e personalizadas.
+- Clonagem de voz e falsificação de imagens ou vídeos.
+- Perfis falsos com fotos e textos gerados artificialmente.
+- Tentativas de imitar familiares, professores, empresas ou figuras públicas.
+- Conteúdo sintético usado para chantagem, manipulação ou desinformação.
+
+**Como identificar e avaliar resultados de IA?**
+
+- Verificar informações importantes em fontes confiáveis.
+- Conferir datas, nomes, números e referências.
+- Procurar a fonte original de uma imagem ou notícia.
+- Entender que erros gramaticais não são necessários para uma fraude e que textos bem escritos também podem enganar.
+- Não confiar exclusivamente em detectores automáticos de conteúdo gerado por IA.
+- Confirmar pedidos urgentes feitos por voz ou vídeo por outro canal conhecido.
+
+**Como utilizar IA com segurança?**
+
+- Não inserir senhas, documentos, endereços, dados escolares identificáveis ou informações íntimas em ferramentas sem necessidade.
+- Não enviar fotos ou dados de outras pessoas sem autorização.
+- Utilizar ferramentas adequadas à idade e às regras da escola.
+- Verificar as políticas de privacidade e os termos de uso.
+- Não tratar respostas da IA como orientação infalível.
+- Revisar, compreender e assumir responsabilidade pelo conteúdo utilizado.
+
+**O que fazer diante de uso malicioso de IA?**
+
+- Não compartilhar conteúdo falso, humilhante ou íntimo.
+- Denunciar o conteúdo à plataforma.
+- Guardar informações relevantes sobre a publicação.
+- Avisar um adulto de confiança e procurar apoio da escola quando necessário.
+- Se houver fraude financeira, chantagem ou ameaça, procurar os canais adequados de atendimento e denúncia.
+
+Resumo: a IA como ferramenta de apoio, seus limites, a importância da verificação e os cuidados éticos e de segurança.
+
+### 5. Tecnologias para auxiliar os estudos — e como a IA pode contribuir
+
+Objetivo: apresentar ferramentas digitais que favorecem a aprendizagem e ensinar os estudantes a utilizá-las com autonomia, senso crítico e responsabilidade.
+
+**Pontos a abordar:**
+
+**O que são tecnologias educacionais?**
+
+- Ferramentas digitais usadas para estudar, pesquisar, organizar informações e praticar conteúdos.
+- Diferença entre ferramenta de apoio e substituição do processo de aprendizagem.
+
+**Quais os principais tipos e exemplos?**
+
+- Plataformas de cursos e ambientes virtuais de aprendizagem.
+- Bibliotecas digitais e repositórios educacionais.
+- Aplicativos de mapas mentais, flashcards e revisão espaçada.
+- Calendários, listas de tarefas e organizadores de estudo.
+- Simuladores, laboratórios virtuais e jogos educativos.
+- Ferramentas de acessibilidade, leitura em voz alta, legendas e transcrição.
+- Assistentes de IA, tutores virtuais e ferramentas de apoio à escrita.
+
+**Como a IA pode contribuir para os estudos?**
+
+- Explicar assuntos difíceis em linguagem simples.
+- Apresentar analogias e exemplos práticos.
+- Criar perguntas de revisão e simulados.
+- Gerar exercícios com níveis progressivos de dificuldade.
+- Auxiliar na organização de um plano de estudos.
+- Sugerir maneiras diferentes de compreender um conceito.
+- Ajudar a identificar lacunas de aprendizagem, desde que o estudante avalie os resultados.
+
+**Como utilizar essas tecnologias adequadamente?**
+
+- Usar a IA para aprender a resolver um problema, não apenas obter a resposta.
+- Tentar resolver exercícios antes de consultar uma solução.
+- Comparar informações com livros, professores e fontes confiáveis.
+- Revisar os conteúdos gerados e corrigir eventuais erros.
+- Citar ou informar o uso de IA quando as regras da atividade exigirem.
+- Respeitar direitos autorais e não copiar trabalhos alheios.
+- Criar uma rotina equilibrada entre ferramentas digitais, leitura, prática e descanso.
+
+**Quais os cuidados necessários?**
+
+- Evitar plataformas suspeitas que solicitam dados desnecessários.
+- Verificar a confiabilidade das fontes e a atualidade das informações.
+- Não compartilhar trabalhos de colegas ou dados pessoais sem autorização.
+- Evitar dependência excessiva de respostas automáticas.
+- Conhecer as regras de uso de cada ferramenta e da escola.
+
+Resumo: tecnologias para pesquisar, organizar, praticar e revisar conteúdos; uso da IA como apoio à aprendizagem, sem substituir o raciocínio próprio.
+
+### 6. Malwares
+
+Objetivo: explicar o que são programas maliciosos, como podem prejudicar dispositivos e informações e quais hábitos ajudam a evitar infecções.
+
+**Pontos a abordar:**
+
+**O que são malwares?**
+
+- Explicação de que são programas ou códigos desenvolvidos para executar ações prejudiciais.
+- Diferença entre malware, vírus e antivírus.
+- Como um dispositivo pode ser comprometido sem que o usuário perceba imediatamente.
+
+**Quais os principais tipos e exemplos?**
+
+- Vírus: código malicioso que infecta arquivos ou programas.
+- Worms: programas capazes de se propagar entre sistemas.
+- Trojans (cavalos de Troia): programas que parecem legítimos, mas executam ações maliciosas.
+- Spyware: software que espiona atividades ou coleta informações.
+- Ransomware: malware que bloqueia ou criptografa arquivos e pode exigir resgate.
+- Keyloggers: ferramentas maliciosas que registram teclas digitadas.
+- Adware malicioso: software que exibe anúncios abusivos ou pode facilitar outros riscos.
+- Aplicativos falsos que prometem vantagens em jogos, modificações ou funcionalidades gratuitas.
+
+**Como costumam ocorrer e como identificar?**
+
+- Downloads de sites desconhecidos.
+- Programas piratas, cracks e modificações suspeitas.
+- Anexos e links maliciosos.
+- Aplicativos falsos ou com permissões excessivas.
+- Alertas de segurança, aplicativos desconhecidos, redirecionamentos e comportamentos anormais do dispositivo.
+- Lentidão ou consumo incomum de recursos, lembrando que esses sinais também podem ter causas legítimas.
+
+**Como se proteger?**
+
+- Baixar aplicativos de lojas oficiais ou fontes confiáveis.
+- Evitar programas piratas e arquivos de origem desconhecida.
+- Manter o sistema e os aplicativos atualizados.
+- Utilizar as proteções de segurança disponíveis no dispositivo.
+- Conferir as permissões solicitadas pelos aplicativos.
+- Não desativar proteções para instalar um arquivo suspeito.
+- Fazer cópias de segurança dos arquivos importantes.
+- Não conectar dispositivos USB desconhecidos.
+
+**O que fazer quando houver suspeita de malware?**
+
+- Interromper downloads e instalações suspeitas.
+- Não inserir senhas nem realizar pagamentos no dispositivo possivelmente comprometido.
+- Avisar um responsável e buscar suporte confiável.
+- Utilizar ferramentas de segurança reconhecidas para verificar o dispositivo.
+- Alterar senhas a partir de um dispositivo confiável se houver suspeita de roubo de credenciais.
+- Restaurar ou reinstalar o sistema com orientação adequada, quando necessário.
+- Não pagar automaticamente um resgate nem acreditar que o pagamento garantirá a recuperação dos arquivos.
+
+Resumo: tipos de malware, formas comuns de infecção, prevenção e primeiros passos diante de um dispositivo comprometido.
+
+### 7. Phishing
+
+Objetivo: ensinar os estudantes a reconhecer mensagens e páginas falsas que tentam roubar senhas, códigos, dados pessoais ou dinheiro.
+
+**Pontos a abordar:**
+
+**O que é phishing?**
+
+- Explicação de que é uma tentativa de enganar alguém para obter informações ou induzir uma ação prejudicial.
+- Diferença entre phishing e malware: phishing é uma técnica de fraude; a mensagem também pode distribuir malware.
+
+**Quais os principais tipos e exemplos?**
+
+- E-mails falsos de empresas ou serviços.
+- Mensagens por SMS ou aplicativos de conversa (smishing).
+- Ligações fraudulentas que tentam obter informações (vishing).
+- Páginas falsas de login.
+- Falsos alertas de conta bloqueada.
+- Mensagens de entrega de encomendas, multas ou cobranças inexistentes.
+- Falsas oportunidades de ganhar itens em jogos.
+- Mensagens que imitam escolas, professores, bancos ou plataformas conhecidas.
+
+**Como costuma ocorrer e como identificar?**
+
+- Mensagens que pedem para clicar em um link e agir rapidamente.
+- Endereços de sites com erros, palavras adicionais ou domínios inesperados.
+- Solicitações de senhas, códigos de autenticação ou dados de pagamento.
+- Anexos inesperados.
+- Ameaças de bloqueio ou promessas de recompensa.
+- Mensagens que parecem legítimas, mas apresentam pedidos incomuns.
+
+**Como se proteger?**
+
+- Acessar serviços digitando o endereço conhecido ou usando o aplicativo oficial.
+- Conferir o domínio completo antes de inserir informações.
+- Não fornecer senhas ou códigos por meio de links recebidos inesperadamente.
+- Confirmar solicitações por outro canal.
+- Utilizar MFA e senhas exclusivas.
+- Manter o navegador e o sistema atualizados.
+- Lembrar que o cadeado HTTPS indica uma conexão criptografada, mas não garante que o site seja legítimo.
+
+**O que fazer quando cair em phishing?**
+
+- Se apenas recebeu a mensagem, não clicar e denunciar como spam ou phishing.
+- Se informou a senha, alterá-la imediatamente em um dispositivo confiável e proteger outras contas que utilizem a mesma senha.
+- Se forneceu códigos de autenticação, proteger a conta e encerrar sessões suspeitas, quando possível.
+- Se baixou ou executou um arquivo, solicitar ajuda para verificar o dispositivo.
+- Se realizou um pagamento, contatar a instituição financeira pelos canais oficiais.
+- Avisar um adulto de confiança.
+
+Resumo: identificar mensagens e páginas falsas, verificar endereços e agir rapidamente quando informações forem expostas.
+
+### 8. Golpes de engenharia social
+
+Objetivo: explicar como golpistas exploram emoções, confiança e relações sociais para convencer pessoas a entregar informações, dinheiro ou acesso a contas.
+
+**Pontos a abordar:**
+
+**O que é engenharia social?**
+
+- Uso de manipulação psicológica para induzir alguém a fazer algo que favoreça o golpista.
+- Diferença entre explorar uma falha técnica e explorar a confiança de uma pessoa.
+- Como urgência, medo, curiosidade, autoridade e promessa de recompensa podem influenciar decisões.
+
+**Quais os principais tipos e exemplos?**
+
+- Falsos funcionários de suporte técnico.
+- Golpistas que fingem ser professores, familiares ou amigos.
+- Falsas solicitações de Pix.
+- Mensagens que pedem códigos de autenticação.
+- Golpes de falso suporte em jogos e redes sociais.
+- Falsos pedidos de ajuda com histórias emocionais.
+- Tentativas de obter informações pessoais para invadir contas.
+- Clonagem de voz e outras falsificações com IA.
+- Situações em que alguém pede que a vítima instale um aplicativo ou compartilhe a tela.
+
+**Como costuma ocorrer e como identificar?**
+
+- Criação de uma situação de urgência: “faça agora ou perderá o acesso”.
+- Tentativa de intimidar a vítima ou impedir que ela consulte outra pessoa.
+- Pedidos para manter a conversa em segredo.
+- Uso de informações pessoais para parecer confiável.
+- Mudança inesperada de conta, número ou método de pagamento.
+- Solicitação de códigos, senhas ou acesso remoto ao dispositivo.
+
+**Como se proteger?**
+
+- Parar e verificar antes de agir.
+- Confirmar pedidos financeiros por um canal independente e já conhecido.
+- Não compartilhar códigos de autenticação.
+- Não instalar programas de acesso remoto por orientação de desconhecidos.
+- Não confiar somente em uma voz, foto ou vídeo.
+- Não se sentir obrigado a responder imediatamente.
+- Pedir ajuda a um adulto quando houver pressão ou dúvida.
+
+**O que fazer quando sofrer uma tentativa ou golpe?**
+
+- Interromper a conversa.
+- Não enviar dinheiro ou mais informações.
+- Bloquear e denunciar o contato.
+- Proteger as contas e o dispositivo, caso algum acesso tenha sido concedido.
+- Contatar o banco se houver transferência.
+- Avisar um responsável e guardar evidências relevantes.
+
+Resumo: reconhecer manipulação emocional, desconfiar de pedidos inesperados e verificar a identidade antes de agir.
+
+### 9. Cibersegurança
+
+Objetivo: apresentar os princípios e hábitos que ajudam a proteger contas, dispositivos, informações e atividades digitais.
+
+**Pontos a abordar:**
+
+**O que é cibersegurança?**
+
+- Conceito de proteção de sistemas, dispositivos, redes, contas e dados.
+- Diferença entre segurança digital, privacidade e proteção de dados.
+- Por que a segurança depende tanto de ferramentas quanto das atitudes dos usuários.
+
+**Quais os principais elementos e práticas?**
+
+- Senhas fortes e exclusivas.
+- Gerenciadores de senhas.
+- Autenticação multifator (MFA), incluindo aplicativos autenticadores e chaves de segurança.
+- Atualizações de sistemas e aplicativos.
+- Antivírus e proteções integradas.
+- Cópias de segurança (backup).
+- Bloqueio de tela e proteção de dispositivos.
+- Permissões de aplicativos.
+- Navegação segura e uso de redes Wi-Fi públicas.
+- Privacidade e compartilhamento responsável de informações.
+
+**Como ocorrem falhas de segurança e como identificá-las?**
+
+- Reutilização de senhas.
+- Ausência de atualizações.
+- Instalação de aplicativos suspeitos.
+- Compartilhamento de códigos de verificação.
+- Contas acessadas de locais ou dispositivos desconhecidos.
+- Alertas inesperados de login ou alteração de senha.
+- Perda de dispositivos desbloqueados.
+- Conexões e páginas falsas que imitam serviços legítimos.
+
+**Como se proteger?**
+
+- Criar senhas longas, únicas e difíceis de adivinhar.
+- Utilizar um gerenciador de senhas confiável.
+- Ativar MFA nas contas importantes.
+- Manter atualizações automáticas quando disponíveis.
+- Realizar backups regulares e verificar se podem ser recuperados.
+- Bloquear dispositivos quando não estiverem em uso.
+- Revisar sessões ativas e encerrar acessos desconhecidos.
+- Evitar compartilhar dados sensíveis.
+- Utilizar redes confiáveis e evitar operações sensíveis em redes suspeitas.
+- Aprender a reconhecer e denunciar atividades suspeitas.
+
+**O que fazer quando uma conta ou dispositivo for comprometido?**
+
+- Recuperar o acesso pelos canais oficiais.
+- Trocar a senha e revogar sessões desconhecidas.
+- Revisar métodos de recuperação e MFA.
+- Verificar se mensagens fraudulentas foram enviadas pela conta.
+- Proteger outras contas afetadas pela reutilização de senha.
+- Procurar suporte técnico, instituição financeira ou responsáveis conforme o caso.
+
+Resumo: um guia prático de segurança digital com hábitos que devem ser aplicados em todos os outros conteúdos do site.
+
+### 10. Fake news e conteúdo falso ou incorreto criado com IA
+
+Objetivo: desenvolver o pensamento crítico e ensinar os estudantes a verificar informações antes de acreditar nelas ou compartilhá-las.
+
+**Pontos a abordar:**
+
+**O que são fake news e desinformação?**
+
+- Notícias falsas e conteúdos enganosos.
+- Diferença entre informação falsa, informação incorreta compartilhada sem intenção de enganar e desinformação produzida ou disseminada deliberadamente.
+- Diferença entre opinião, sátira, erro jornalístico e informação factual.
+- Como conteúdos falsos podem prejudicar pessoas, escolas e comunidades.
+
+**Quais os principais tipos e exemplos?**
+
+- Manchetes enganosas.
+- Notícias inventadas.
+- Imagens antigas apresentadas como atuais.
+- Fotografias retiradas de contexto.
+- Vídeos editados para alterar o sentido de uma fala.
+- Áudios e vídeos falsos gerados por IA.
+- Perfis que se passam por instituições ou pessoas conhecidas.
+- Gráficos, pesquisas ou estatísticas inventados.
+- Conteúdos científicos com explicações incorretas.
+- Boatos sobre emergências, saúde, segurança ou acontecimentos escolares.
+
+**Como costuma ocorrer e como identificar?**
+
+- Títulos sensacionalistas que provocam medo ou indignação.
+- Mensagens que pedem compartilhamento imediato.
+- Ausência de fontes verificáveis.
+- Datas, imagens ou números incompatíveis com a história.
+- Conteúdos apresentados como prova sem contexto.
+- Imitação de páginas oficiais.
+- Respostas de IA com referências inexistentes ou informações inventadas.
+
+**Como verificar uma informação?**
+
+- Consultar mais de uma fonte confiável e independente.
+- Procurar a publicação original e verificar a data.
+- Pesquisar o nome da instituição ou pessoa envolvida.
+- Comparar a imagem com outras versões disponíveis e investigar sua origem.
+- Verificar se veículos confiáveis ou órgãos oficiais confirmam a informação.
+- Distinguir evidências de opiniões e especulações.
+- Não considerar ferramentas de detecção de IA como prova definitiva de autenticidade ou falsidade.
+
+**Como se proteger e evitar espalhar desinformação?**
+
+- Não compartilhar antes de verificar.
+- Ler além do título.
+- Evitar repassar mensagens alarmistas sem confirmação.
+- Corrigir informações falsas de maneira responsável.
+- Não usar IA como única fonte de pesquisa.
+- Informar quando um conteúdo for gerado ou alterado por IA, quando isso for relevante.
+- Respeitar a privacidade e evitar expor pessoas por causa de boatos.
+
+**O que fazer ao encontrar conteúdo falso ou enganoso?**
+
+- Verificar a informação antes de reagir.
+- Denunciar a publicação na plataforma quando necessário.
+- Evitar ampliar seu alcance por meio de compartilhamentos.
+- Corrigir a informação com fontes confiáveis, quando apropriado.
+- Avisar um responsável ou professor quando o conteúdo causar prejuízo ou colocar alguém em risco.
+
+Resumo: pensamento crítico, checagem de fontes, verificação de imagens e vídeos e responsabilidade ao compartilhar informações.
+
+## 3. Conteúdos complementares que recomendo incluir
+
+Os 11 tópicos cobrem os principais assuntos planejados. Entretanto, alguns conhecimentos importantes podem acabar dispersos entre eles. Para evitar lacunas, recomendo acrescentar estes conteúdos como seções curtas, caixas informativas ou materiais complementares.
+
+### 11. Senhas, autenticação e proteção de contas
+
+- Como criar senhas fortes, longas e exclusivas.
+- O que são gerenciadores de senhas e por que ajudam.
+- O que é MFA e como funciona a verificação em duas etapas.
+- Diferença entre senha, código de verificação e código de recuperação.
+- Como reconhecer alertas de login suspeitos e proteger contas invadidas.
+
+### 12. Privacidade, dados pessoais e identidade digital
+
+- O que são dados pessoais e dados sensíveis, com exemplos adequados à idade.
+- Por que não divulgar endereço, documentos, senhas e localização.
+- Pegada digital e consequências das publicações.
+- Permissões de aplicativos e compartilhamento de dados.
+- Consentimento, respeito à imagem e privacidade de outras pessoas.
+
+### 13. Proteção contra assédio, aliciamento e chantagem online
+
+- Como reconhecer tentativas de manipulação por desconhecidos ou conhecidos.
+- Pedidos de segredo, imagens íntimas, encontros escondidos ou mudança para canais privados.
+- Chantagem envolvendo fotos, vídeos, dinheiro ou ameaças.
+- Como recusar, bloquear, denunciar e pedir ajuda.
+- Como agir sem culpar a vítima e sem compartilhar o material abusivo.
+
+Este assunto merece atenção específica por envolver a proteção de crianças e adolescentes. O material deve explicar os riscos de forma apropriada à idade, sem imagens explícitas ou descrições gráficas. O UNICEF reúne orientações e dados sobre violência facilitada pela tecnologia no Brasil.
+
+### 14. Ética, cidadania digital e responsabilidade
+
+- Direitos e deveres no ambiente digital.
+- Respeito, empatia e convivência online.
+- Direitos autorais, plágio e atribuição de fontes.
+- Responsabilidade ao publicar, comentar e compartilhar.
+- Consequências de usar tecnologia para prejudicar outras pessoas.
+- Como contribuir para uma internet mais segura e inclusiva.
+
+Esses quatro assuntos podem ser páginas próprias ou módulos integrados aos temas existentes. Caso o projeto precise manter exatamente 11 páginas, recomendo incorporar seus conteúdos principalmente nos tópicos 0, 3, 4 e 9.
+
+## 4. Orientações comuns para toda a equipe
+
+Independentemente do tópico produzido, alguns princípios devem aparecer ao longo do site.
+
+- Desconfiar não significa ter medo de tudo: significa verificar antes de clicar, pagar, compartilhar ou fornecer informações.
+- Urgência é um sinal de alerta: pedidos para agir imediatamente, guardar segredo ou não consultar ninguém merecem atenção.
+- A aparência não comprova autenticidade: perfis, sites, documentos, áudios e vídeos podem ser falsificados, inclusive com IA.
+- Prevenção não elimina todos os riscos: é importante ensinar também como reagir quando algo dá errado.
+- A vítima deve receber apoio, não culpa: crianças e adolescentes precisam saber que podem pedir ajuda sem medo de humilhação ou punição.
+- Denunciar é diferente de compartilhar: não se deve espalhar conteúdo ofensivo, íntimo, fraudulento ou prejudicial para provar que ele existe.
+- A segurança envolve hábitos e ferramentas: senhas fortes, MFA, atualizações, privacidade e verificação de informações devem ser apresentados como práticas complementares.
+
+## 5. Formato recomendado para cada página do site
+
+Para facilitar a produção e manter os conteúdos didáticos, recomendo que cada página siga este modelo visual:
+
+## Exemplo de estrutura de página
+
+01 — ENTENDA
+
+O que é phishing?
+
+Uma explicação curta, com linguagem simples e um exemplo do cotidiano.
+
+02 — RECONHEÇA
+
+Como identificar?
+
+Exemplo de mensagem falsa, com os sinais suspeitos destacados.
+
+03 — PREVINA-SE
+
+Como se proteger?
+
+Lista curta de ações que o estudante pode aplicar imediatamente.
+
+04 — SAIBA AGIR
+
+E se acontecer comigo?
+
+Passos claros para interromper o risco, proteger as contas e procurar ajuda.
+
+05 — PRATIQUE
+
+Desafio ou quiz
+
+Uma situação fictícia com alternativas para o estudante identificar a conduta mais segura.
+
+06 — REVISE
+
+Resumo e checklist
+
+Três a cinco recomendações essenciais para recordar.
+
+## 6. Referências para a produção do material
+
+Para garantir precisão, exemplos atuais e recomendações adequadas ao público, a equipe pode utilizar estes materiais como base de pesquisa:
+
+- CERT.br — [Cartilha de Segurança para Internet](https://cartilha.cert.br/). Referência brasileira para golpes, malware, proteção de contas, privacidade e uso seguro de IA.
+
+- UNICEF Brasil — [Internet sem Vacilo](https://www.unicef.org/brazil/internet-sem-vacilo). Material direcionado a adolescentes sobre comportamento, respeito, privacidade e riscos na internet.
+
+- SaferNet Brasil e NIC.br — [Recursos do Dia da Internet Segura](https://www.diadainternetsegura.org.br/recursos/). Materiais educativos para estudantes, famílias e educadores.
+
+**Recomendação final:** priorize conteúdos curtos, exemplos realistas, ilustrações e situações interativas. O objetivo principal não é memorizar nomes técnicos, mas permitir que o estudante reconheça um risco, saiba como evitá-lo e consiga tomar uma atitude segura quando precisar.

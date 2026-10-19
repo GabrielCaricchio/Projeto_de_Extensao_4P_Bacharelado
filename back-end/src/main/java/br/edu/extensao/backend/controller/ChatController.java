@@ -17,9 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.Duration;
 import java.util.Map;
 
-/**
- * Controller responsável pelo endpoint do Chatbot interativo.
- */
 @RestController
 @RequestMapping("/api/chat")
 public class ChatController {

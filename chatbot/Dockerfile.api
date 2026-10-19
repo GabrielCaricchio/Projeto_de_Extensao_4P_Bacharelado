@@ -8,7 +8,7 @@ WORKDIR /app
 COPY chatbot/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY chatbot/chatbot.py ./
+COPY chatbot/chatbot.py chatbot/conteudo_educativo.txt* ./
 
 EXPOSE 8000
 
