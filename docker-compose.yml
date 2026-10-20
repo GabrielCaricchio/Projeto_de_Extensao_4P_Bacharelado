@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: back-end/Dockerfile
-    container_name: cybertech-backend
+    container_name: cybertech-backend2
     ports:
       - "8080:8080"
     environment:
@@ -14,7 +14,7 @@ services:
       # Permite origens do Angular (local na 4200, Docker/Nginx na 80/4200):
       - CORS_ALLOWED_ORIGINS=http://localhost:4200,http://127.0.0.1:4200,http://localhost:80,http://localhost
     networks:
-      - cybertech-network
+      - cybertech-network2
     depends_on:
       - chatbot-api
     restart: unless-stopped
@@ -26,14 +26,14 @@ services:
     build:
       context: .
       dockerfile: front-end/Dockerfile
-    container_name: cybertech-frontend
+    container_name: cybertech-frontend2
     ports:
       - "4200:80"
       - "80:80"
     depends_on:
       - backend
     networks:
-      - cybertech-network
+      - cybertech-network2
     restart: unless-stopped
 
   # =========================================================================
@@ -43,7 +43,7 @@ services:
     build:
       context: .
       dockerfile: chatbot/Dockerfile.api
-    container_name: cybertech-chatbot-api
+    container_name: cybertech-chatbot-api2
     env_file:
       - path: ./.env
         required: false
@@ -52,9 +52,9 @@ services:
     environment:
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.3-70b-versatile}
     networks:
-      - cybertech-network
+      - cybertech-network2
     restart: unless-stopped
 
 networks:
-  cybertech-network:
+  cybertech-network2:
     driver: bridge
